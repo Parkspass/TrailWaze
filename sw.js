@@ -19,8 +19,6 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll([
-        './pics/zion_vem_buttons-04.svg',
-        './pics/zion_vem_buttons-05.svg',
         './images/android-chrome-192x192.png',
         './images/android-chrome-512x512.png',
         './images/apple-touch-icon.png',
