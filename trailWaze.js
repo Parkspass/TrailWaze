@@ -1,6 +1,5 @@
  /*jshint esversion: 6 */
-
-
+console.log('connected');
 // Start of functions for the SVG circle
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -33,7 +32,9 @@ var app = new Vue({
 
     },
     methods: {
-
+        click: function() {
+            console.log('you clicked the button');
+        }
     }
 });
 
