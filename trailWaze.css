@@ -1,0 +1,17 @@
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .background {
+    opacity: 0.3;
+    stroke-width: 8;
+    fill: none;
+  }
+  .overlayLine {
+    fill: none;
+    stroke-width: 8;
+    animation: dash 2s linear forwards;
+  }
+  
