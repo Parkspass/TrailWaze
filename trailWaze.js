@@ -55,7 +55,7 @@ var app = new Vue({
     },
     mounted() {
         this.getTodaysDate();
-        }
+        
     }
 });
 
