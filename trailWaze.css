@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Regular.ttf');
+}
+@media screen and (max-width: 599px) {
+    body{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+    }
+    #parkTitle{
+        color: #7E8959;
+        position: absolute;
+        width: 165px;
+        height: 23px;
+        left: 15px;
+        top: 102px;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    #date{
+        position: absolute;
+        width: 151px;
+        height: 16px;
+        left: 16px;
+        top: 131px;
+        
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+}
