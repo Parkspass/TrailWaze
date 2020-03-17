@@ -30,6 +30,7 @@ var app = new Vue({
     el: '#app',
     data: {
         todaysDate: "",
+        currentTemp: "75",
     },
     methods: {
         getTodaysDate: function () {
