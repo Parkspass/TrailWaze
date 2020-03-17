@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
       <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -21,9 +22,17 @@
   </head>
 	<body>
 		<div id="app">
-      <h1 id="parkTitle">Zion National Park</h1>
-      <h2 id="date">{{todaysDate}}</h2>
-      
+			
+			<div>
+				<v-app-bar dense >
+					<v-btn text icon>
+						<v-img src="./icons/fog.png"></v-img>
+					  </v-btn>
+				</v-app-bar>
+			</div>
+
+      		<h1 id="parkTitle">Zion National Park</h1>
+      		<h2 id="date">{{todaysDate}}</h2>
 			<!-- SVG circle -->
 			<svg id="svg" viewBox="-10 -10 220 220" width="90%">
         <text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #C9AC68">{{currentTemp}}&#176;</text>
