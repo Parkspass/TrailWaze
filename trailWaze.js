@@ -54,7 +54,9 @@ var app = new Vue({
     },
     mounted() {
         this.getTodaysDate();
-        }
+        
+    }
+        
 });
 
 // THIS SECTION NEEDED TO REGISTER SERVICE WORKER //
