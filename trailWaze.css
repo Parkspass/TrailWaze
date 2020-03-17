@@ -3,50 +3,45 @@
       stroke-dashoffset: 0;
     }
 }
-
 .background {
     opacity: 0.3;
-    stroke-width: 8;
+    stroke-width: 17;
     fill: none;
 }
 .overlayLine {
     fill: none;
-    stroke-width: 8;
+    stroke-width: 17;
     animation: dash 2s linear forwards;
 }
 
 @font-face{
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-Regular.ttf');
+    font-family: "myRoboto";
+    src: url("fonts/Roboto-Regular.woff");
 }
 @media screen and (max-width: 599px) {
     body{
-        font-family: 'Roboto';
+        font-family: 'myRoboto';
         font-style: normal;
         font-weight: normal;
     }
     #parkTitle{
         color: #7E8959;
-        position: absolute;
-        width: 165px;
-        height: 23px;
-        left: 15px;
-        top: 102px;
-
-        font-style: normal;
-        font-weight: normal;
+        margin-left: 15px;
+        margin-top: 30px;
         font-size: 20px;
         line-height: 23px;
     }
     #date{
-        position: absolute;
-        width: 151px;
-        height: 16px;
-        left: 16px;
-        top: 131px;
-        
+        margin-left: 15px;
         font-size: 14px;
         line-height: 16px;
         color: rgba(0, 0, 0, 0.87);
+        margin-bottom: 15px;
+    }
+    #svg{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 }

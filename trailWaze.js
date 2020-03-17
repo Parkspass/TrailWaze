@@ -49,7 +49,6 @@ var app = new Vue({
                 minutes = "0" + date.getMinutes();
             }
             var fulldate = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDay() + " " + hours + ":" + minutes + " " + TOD;
-            console.log(fulldate);
             this.todaysDate = fulldate;
         }
     },

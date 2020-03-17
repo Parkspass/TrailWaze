@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta content="utf-8" http-equiv="encoding">
-		<title>Trail Waze</title>
-		<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="vuetify.min.css">
-        <link rel="stylesheet" type="text/css" href="trailWaze.css">
-        <!-- Here we need to place the product link: -->
 
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="./images/android-chrome-512x512.png">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        <script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register("service-worker.js");};</script>
-        
-    </head>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="utf-8" http-equiv="encoding">
+      <title>Trail Waze</title>
+      <link rel="stylesheet" type="text/css" href="vuetify.min.css">
+      <link rel="stylesheet" type="text/css" href="trailWaze.css">
+      <!-- Here we need to place the product link: -->
 
-
-
-    
-
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="./images/android-chrome-512x512.png">
+      <link rel="manifest" href="./manifest.json">
+      <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register("service-worker.js");};</script>
+      <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  </head>
 	<body>
 		<div id="app">
 			
 			<div>
 				<v-app-bar dense >
-					<v-btn flat icon>
+					<v-btn text icon>
 						<v-img src="./icons/fog.png"></v-img>
 					  </v-btn>
 				</v-app-bar>
@@ -40,17 +34,17 @@
       		<h1 id="parkTitle">Zion National Park</h1>
       		<h2 id="date">{{todaysDate}}</h2>
 			<!-- SVG circle -->
-			<svg id="svg" viewBox="0 0 200 200" width="300" height="300">
-				<circle class="background" cx="100" cy="100" r="20" stroke="#C9AC68" />
-				<circle class="background" cx="100" cy="100" r="30" stroke="#B25538" />
-				<circle class="background" cx="100" cy="100" r="40" stroke="#507282" />
-				<circle class="background" cx="100" cy="100" r="50" stroke="#7E8959" />
+			<svg id="svg" viewBox="-10 -10 220 220" width="90%">
+				<circle class="background" cx="100" cy="100" r="35" stroke="#C9AC68" />
+				<circle class="background" cx="100" cy="100" r="55" stroke="#B25538" />
+				<circle class="background" cx="100" cy="100" r="75" stroke="#507282" />
+				<circle class="background" cx="100" cy="100" r="95" stroke="#7E8959" />
 			
 				<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
-				<circle id="line1" class="overlayLine" cx="100" cy="100" r="20" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
-				<circle id="line2" class="overlayLine" cx="100" cy="100" r="30" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
-				<circle id="line3" class="overlayLine" cx="100" cy="100" r="40" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
-				<circle id="line4" class="overlayLine" cx="100" cy="100" r="50" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+				<circle id="line1" class="overlayLine" cx="100" cy="100" r="35" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
+				<circle id="line2" class="overlayLine" cx="100" cy="100" r="55" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
+				<circle id="line3" class="overlayLine" cx="100" cy="100" r="75" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+				<circle id="line4" class="overlayLine" cx="100" cy="100" r="95" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 			</svg>
 
 			
