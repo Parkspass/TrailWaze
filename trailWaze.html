@@ -17,9 +17,8 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register("service-worker.js");};</script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     </head>
-</html>
 
 
 <body>
@@ -30,3 +29,30 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="trailWaze.js"></script>
 </body>
+
+	<body>
+		<div id="app">
+			
+			<!-- SVG circle -->
+			<svg id="svg" viewBox="0 0 200 200" width="300" height="300">
+				<circle class="background" cx="100" cy="100" r="20" stroke="#C9AC68" />
+				<circle class="background" cx="100" cy="100" r="30" stroke="#B25538" />
+				<circle class="background" cx="100" cy="100" r="40" stroke="#507282" />
+				<circle class="background" cx="100" cy="100" r="50" stroke="#7E8959" />
+			
+				<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
+				<circle id="line1" class="overlayLine" cx="100" cy="100" r="20" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
+				<circle id="line2" class="overlayLine" cx="100" cy="100" r="30" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
+				<circle id="line3" class="overlayLine" cx="100" cy="100" r="40" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+				<circle id="line4" class="overlayLine" cx="100" cy="100" r="50" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+			</svg>
+
+			<h1>TrailWaze</h1>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+		<script src="trailWaze.js"></script>
+		<noscript>Please install Javascript</noscript>
+	</body>
+</html>
