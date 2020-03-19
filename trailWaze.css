@@ -16,12 +16,16 @@
 
 @font-face{
     font-family: "myRoboto";
-    src: url("fonts/Roboto/Roboto-Thin.ttf");
+    src: url("fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face{
+    font-family: "titleRoboto";
+    src: url("fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf")
 }
 .primary--text{
     color: #7E8959;
     font-family: "myRoboto";
-    src: url("fonts/Roboto/Roboto-Thin.ttf");
+    src: url("fonts/Roboto/Roboto-Light.ttf");
 }
 @media screen and (max-width: 599px) {
     body{
@@ -35,6 +39,7 @@
         margin-top: 30px;
         font-size: 20px;
         line-height: 23px;
+        font-family: 'titleRoboto'
     }
     #date{
         margin-left: 15px;

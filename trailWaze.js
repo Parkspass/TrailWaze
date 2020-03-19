@@ -25,25 +25,18 @@ function randomStops(){
 randomStops();
 // End of functions for SVG circle
   
-
+Vue.use(Vuetify);
 var app = new Vue({
     el: '#app',
     data: {
         todaysDate: "",
         currentTemp: "75",
+        currentTempImage: "lightning_outline.png",
         seasonImage: "",
         popularTrailsStatus: "A little busy",
         parkingStatus: "As busy as it gets",
         shuttleStatus: "A little busy",
         entranceStatus: "A little busy",
-
-        items: [
-            { title: 'Popular Trails: ' + this.popularTrailsStatus },
-            { title: 'Parking: ' + this.parkingStatus },
-            { title: 'Shuttles: ' + this.shuttleStatus},
-            { title: 'Entrances: ' + this.entranceStatus},
-        ],
-        offset: true,
 
         displaySeasonImage: true,
     },

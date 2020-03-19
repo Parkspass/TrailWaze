@@ -36,7 +36,7 @@
 			<!-- SVG circle -->
 			<div id="svgContainer">
 				<svg id="svg" viewBox="-10 -10 220 220" width="90%">
-					<text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #C9AC68">{{currentTemp}}&#176;</text>
+					<text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #C9AC68">{{currentTemp}}&#176;F</text>
 					<circle class="background" cx="100" cy="100" r="35" stroke="#C9AC68" />
 					<circle class="background" cx="100" cy="100" r="55" stroke="#B25538" />
 					<circle class="background" cx="100" cy="100" r="75" stroke="#507282" />
@@ -53,26 +53,6 @@
       		<!-- SUMMER PAGE -->
       		<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
 	  
-			<v-menu top :offset-y="offset">
-				<template v-slot:activator="{ on }">
-					<v-btn
-						class="primary--text"
-						v-on="on"
-					>
-					Select Viewing Option
-					</v-btn>
-				</template>
-
-				<v-list>
-					<v-list-item
-						v-for="(item, index) in items"
-						:key="index"
-						@click=""
-					>
-						<v-list-item-title>{{ item.title }}</v-list-item-title>
-					</v-list-item>
-				</v-list>
-			</v-menu>
     	</div>
     
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
