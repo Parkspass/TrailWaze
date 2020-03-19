@@ -51,7 +51,7 @@
     #currentTemp{
         font-family: 'myRoboto';
     }
-    #summerImage{
+    #seasonImage{
         background-image: url('images/summer.png');
         width: 120%;
         margin-left: -30px;

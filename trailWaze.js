@@ -31,6 +31,9 @@ var app = new Vue({
     data: {
         todaysDate: "",
         currentTemp: "75",
+        seasonImage: "",
+
+        displaySeasonImage: true,
     },
     methods: {
         getTodaysDate: function () {
@@ -51,14 +54,25 @@ var app = new Vue({
             }
             var fulldate = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDay() + " " + hours + ":" + minutes + " " + TOD;
             this.todaysDate = fulldate;
-        }
+            var month = date.getMonth() + 1;
+            console.log(month);
+            if (month > 6 & month < 9){
+                this.seasonImage = "'images/summer.png'";
+            }else if(month > 9 & month < 12){
+                this.seasonImage = "'images/fall.png'";
+            }else if(month > 12 | month < 3){
+                this.seasonImage = "'images/winter.png'";
+            }else{
+                this.seasonImage = "'images/spring.png'";
+            }
+        },
     },
     mounted() {
         this.getTodaysDate();
-        
     }
         
 });
+
 
 // THIS SECTION NEEDED TO REGISTER SERVICE WORKER //
 window.onload = () => {
