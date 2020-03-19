@@ -39,6 +39,7 @@ var app = new Vue({
         entranceStatus: "A little busy",
 
         displaySeasonImage: true,
+
     },
     methods: {
         getTodaysDate: function () {
@@ -70,6 +71,12 @@ var app = new Vue({
                 this.seasonImage = "'images/spring.png'";
             }
         },
+        hourlySelected: function(){
+            console.log("Hourly selected");
+        },
+        dailySelected: function(){
+            console.log("Daily selected");
+        }
     },
     mounted() {
         this.getTodaysDate();

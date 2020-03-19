@@ -26,7 +26,7 @@
 			<div>
 				<v-app-bar dense >
 					<v-btn text icon>
-						<v-img src="./icons/fog.png"></v-img>
+						<v-img src="./icons/fog.svg"></v-img>
 					  </v-btn>
 				</v-app-bar>
 			</div>
@@ -50,12 +50,53 @@
 				</svg>
 			</div>
 
-      		<!-- SUMMER PAGE -->
 			<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
+
+			<!-- POPULAR TRAILS -->
 			<div class="subHeaderContainer">
 				<div id="popularTrailsIcon"></div>
-				<div id="popularTrailsTitle">Popular Trails: {{popularTrailsStatus}}</div>
+				<div class="subHeaders">Popular Trails: {{popularTrailsStatus}}</div>
 			</div>
+
+			<div class="hourlyButtonContainer">
+				<button id="hourlyButton" v-on:click="hourlySelected()">HOURLY</button>
+			</div>
+			<div class="dailyButtonContainer">
+				<button id="dailyButton" v-on:click="dailySelected()">DAILY</button>
+			</div>
+			
+			<div class="displayContainer">
+				<div>LIVE</div><div>1 PM</div><div>3 PM</div><div>5 PM</div>
+			</div>
+			<div class="displayContainer">
+				<div>SVG</div><div>SVG</div><div>SVG</div><div>SVG</div>
+			</div>
+			<div class="displayContainer">
+				<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
+			</div>
+			<div class="nextHoursContainer">
+				<button id="popTrailsNextHours">NEXT 48 HOURS</button>
+			</div>
+
+
+			<!-- PARKING -->
+			<div class="subHeaderContainer">
+				<div id="parkingIcon"></div>
+				<div class="subHeaders">Parking: {{parkingStatus}}</div>
+			</div>
+
+			<!-- SHUTTLES -->
+			<div class="subHeaderContainer">
+				<div id="shuttleIcon"></div>
+				<div class="subHeaders">Shuttles: {{shuttleStatus}}</div>
+			</div>
+
+			<!-- ENTRANCES -->
+			<div class="subHeaderContainer">
+				<div id="entranceIcon"></div>
+				<div class="subHeaders">Entrances: {{entranceStatus}}</div>
+			</div>
+
     	</div>
     
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
