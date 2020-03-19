@@ -16,7 +16,16 @@
 
 @font-face{
     font-family: "myRoboto";
-    src: url("fonts/Roboto/Roboto-Thin.ttf");
+    src: url("fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face{
+    font-family: "titleRoboto";
+    src: url("fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf")
+}
+.primary--text{
+    color: #7E8959;
+    font-family: "myRoboto";
+    src: url("fonts/Roboto/Roboto-Light.ttf");
 }
 @media screen and (max-width: 599px) {
     body{
@@ -30,6 +39,7 @@
         margin-top: 30px;
         font-size: 20px;
         line-height: 23px;
+        font-family: 'titleRoboto'
     }
     #date{
         margin-left: 15px;
@@ -47,21 +57,37 @@
         z-index: -1;
         display: block;
         margin-bottom: 10px;
+        display: block;
+    }
+    #svgContainer{
+        display: block;
+        width: 90%;
+        height: 340px;
     }
     #currentTemp{
         font-family: 'myRoboto';
     }
-    #summerImage{
+    #seasonImage{
         background-image: url('images/summer.png');
         width: 120%;
         margin-left: -30px;
-        height: auto;
         background-repeat:no-repeat;
         background-size: contain;
-        height:200px;
+        height:80px;
         display: block;
         position: relative;
-        margin-top: 350px;
+    }
+    #popularTrailsIcon{
+        display: inline-block;
+        background-image: url("icons/trails_outline_green.svg");
+        width: 25px;
+        height: 25px;
+    }
+    #popularTrailsTitle{
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.87);
+        display: inline;
     }
 }
 
