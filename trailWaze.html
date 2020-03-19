@@ -23,13 +23,38 @@
 	<body>
 		<div id="app">
 			
-			<div>
-				<v-app-bar dense >
-					<v-btn text icon>
-						<v-img src="./icons/fog.png"></v-img>
-					  </v-btn>
-				</v-app-bar>
-			</div>
+			<v-app-bar dense  class="justify-space-around">
+					<v-layout >
+						<v-btn text icon>
+							<v-img id="green" src="./icons/home.png"></v-img>
+						</v-btn>
+					</v-layout>
+					<v-layout >
+						<v-btn text icon>
+							<v-img  src="./icons/trails_outline-1.png"></v-img>
+						</v-btn>
+					</v-layout>
+					<v-layout >
+						<v-btn text icon >
+							<v-img src="./icons/parking_outline-1.png"></v-img>
+						</v-btn>
+					</v-layout>
+					<v-layout >
+						<v-btn text icon >
+							<v-img src="./icons/zion_shuttle_outline-1.png"></v-img>
+						</v-btn>
+					</v-layout>
+					<v-layout >
+						<v-btn text icon >
+							<v-img src="./icons/kolob_outline-1.png"></v-img>
+						</v-btn>
+					</v-layout>
+					<v-layout >
+						<v-btn text icon>
+							<v-img id="green" src="./icons/menu.png" ></v-img>
+						</v-btn>
+					</v-layout>
+			</v-app-bar>
 
       		<h1 id="parkTitle">Zion National Park</h1>
       		<h2 id="date">{{todaysDate}}</h2>
