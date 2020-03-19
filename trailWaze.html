@@ -34,28 +34,51 @@
       		<h1 id="parkTitle">Zion National Park</h1>
       		<h2 id="date">{{todaysDate}}</h2>
 			<!-- SVG circle -->
-			<svg id="svg" viewBox="-10 -10 220 220" width="90%">
-        <text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #C9AC68">{{currentTemp}}&#176;</text>
-				<circle class="background" cx="100" cy="100" r="35" stroke="#C9AC68" />
-				<circle class="background" cx="100" cy="100" r="55" stroke="#B25538" />
-				<circle class="background" cx="100" cy="100" r="75" stroke="#507282" />
-				<circle class="background" cx="100" cy="100" r="95" stroke="#7E8959" />
-			
-				<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
-				<circle id="line1" class="overlayLine" cx="100" cy="100" r="35" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
-				<circle id="line2" class="overlayLine" cx="100" cy="100" r="55" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
-				<circle id="line3" class="overlayLine" cx="100" cy="100" r="75" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
-				<circle id="line4" class="overlayLine" cx="100" cy="100" r="95" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-	  </svg>
+			<div id="svgContainer">
+				<svg id="svg" viewBox="-10 -10 220 220" width="90%">
+					<text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #C9AC68">{{currentTemp}}&#176;</text>
+					<circle class="background" cx="100" cy="100" r="35" stroke="#C9AC68" />
+					<circle class="background" cx="100" cy="100" r="55" stroke="#B25538" />
+					<circle class="background" cx="100" cy="100" r="75" stroke="#507282" />
+					<circle class="background" cx="100" cy="100" r="95" stroke="#7E8959" />
+				
+					<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
+					<circle id="line1" class="overlayLine" cx="100" cy="100" r="35" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)" />
+					<circle id="line2" class="overlayLine" cx="100" cy="100" r="55" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
+					<circle id="line3" class="overlayLine" cx="100" cy="100" r="75" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+					<circle id="line4" class="overlayLine" cx="100" cy="100" r="95" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+				</svg>
+			</div>
 
-      <!-- SUMMER PAGE -->
-      <div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
-      
-    </div>
+      		<!-- SUMMER PAGE -->
+      		<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
+	  
+			<v-menu top :offset-y="offset">
+				<template v-slot:activator="{ on }">
+					<v-btn
+						class="primary--text"
+						v-on="on"
+					>
+					Select Viewing Option
+					</v-btn>
+				</template>
+
+				<v-list>
+					<v-list-item
+						v-for="(item, index) in items"
+						:key="index"
+						@click=""
+					>
+						<v-list-item-title>{{ item.title }}</v-list-item-title>
+					</v-list-item>
+				</v-list>
+			</v-menu>
+    	</div>
     
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 		<script src="trailWaze.js"></script>
+
 		<noscript>Please install Javascript</noscript>
 	</body>
 </html>

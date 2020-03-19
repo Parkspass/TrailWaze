@@ -18,6 +18,11 @@
     font-family: "myRoboto";
     src: url("fonts/Roboto/Roboto-Thin.ttf");
 }
+.primary--text{
+    color: #7E8959;
+    font-family: "myRoboto";
+    src: url("fonts/Roboto/Roboto-Thin.ttf");
+}
 @media screen and (max-width: 599px) {
     body{
         font-family: 'myRoboto';
@@ -47,6 +52,12 @@
         z-index: -1;
         display: block;
         margin-bottom: 10px;
+        display: block;
+    }
+    #svgContainer{
+        display: block;
+        width: 90%;
+        height: 340px;
     }
     #currentTemp{
         font-family: 'myRoboto';
@@ -61,6 +72,5 @@
         height:200px;
         display: block;
         position: relative;
-        margin-top: 350px;
     }
 }

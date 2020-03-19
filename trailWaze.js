@@ -32,6 +32,18 @@ var app = new Vue({
         todaysDate: "",
         currentTemp: "75",
         seasonImage: "",
+        popularTrailsStatus: "A little busy",
+        parkingStatus: "As busy as it gets",
+        shuttleStatus: "A little busy",
+        entranceStatus: "A little busy",
+
+        items: [
+            { title: 'Popular Trails: ' + this.popularTrailsStatus },
+            { title: 'Parking: ' + this.parkingStatus },
+            { title: 'Shuttles: ' + this.shuttleStatus},
+            { title: 'Entrances: ' + this.entranceStatus},
+        ],
+        offset: true,
 
         displaySeasonImage: true,
     },
@@ -55,7 +67,6 @@ var app = new Vue({
             var fulldate = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDay() + " " + hours + ":" + minutes + " " + TOD;
             this.todaysDate = fulldate;
             var month = date.getMonth() + 1;
-            console.log(month);
             if (month > 6 & month < 9){
                 this.seasonImage = "'images/summer.png'";
             }else if(month > 9 & month < 12){
