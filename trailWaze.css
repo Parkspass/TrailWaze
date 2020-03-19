@@ -71,11 +71,22 @@
         background-image: url('images/summer.png');
         width: 120%;
         margin-left: -30px;
-        height: auto;
         background-repeat:no-repeat;
         background-size: contain;
-        height:200px;
+        height:80px;
         display: block;
         position: relative;
+    }
+    #popularTrailsIcon{
+        display: inline-block;
+        background-image: url("icons/trails_outline_green.svg");
+        width: 25px;
+        height: 25px;
+    }
+    #popularTrailsTitle{
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.87);
+        display: inline;
     }
 }

@@ -51,8 +51,11 @@
 			</div>
 
       		<!-- SUMMER PAGE -->
-      		<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
-	  
+			<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
+			<div class="subHeaderContainer">
+				<div id="popularTrailsIcon"></div>
+				<div id="popularTrailsTitle">Popular Trails: {{popularTrailsStatus}}</div>
+			</div>
     	</div>
     
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
