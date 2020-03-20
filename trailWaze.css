@@ -13,7 +13,15 @@
     stroke-width: 17;
     animation: dash 2s linear forwards;
 }
-
+#sideDrawerTitle {
+    font-family: "myRoboto";
+    font-size: 20px;
+    font-weight: bold;
+}
+#ParkTitles{
+    font-family: "myRoboto";
+    font-size: 16px;
+}
 @font-face{
     font-family: "myRoboto";
     src: url("fonts/Roboto/Roboto-Regular.ttf");
@@ -27,6 +35,7 @@
     font-family: "myRoboto";
     src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
+
 /* ------------------------------------MOBILE VIEW------------------------------ */
 @media screen and (max-width: 599px) {
     body{
@@ -92,7 +101,7 @@
     }
     .subHeaderContainer{
         display: block;
-        border-bottom: .5px solid rgb(212,212,212, .8);
+        border-bottom: .7px solid rgb(212,212,212, .8);
     }
     #popularTrailsContainer{
         display: block;
@@ -154,7 +163,7 @@
         width: 24%;
     }
     #display1{
-        margin-left: 4px;
+        margin-left: 3px;
         margin-right: -2px;
     }
     #currentWeatherIcon{
