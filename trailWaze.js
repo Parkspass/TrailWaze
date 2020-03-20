@@ -42,7 +42,7 @@ var app = new Vue({
         parkingStatus: "As busy as it gets",
         shuttleStatus: "A little busy",
         entranceStatus: "A little busy",
-        drawer: null,
+        drawer: false,
         items: [
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' },
