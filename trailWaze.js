@@ -35,6 +35,9 @@ var app = new Vue({
     data: {
         todaysDate: "",
         currentTemp: "75",
+        hour2: "",
+        hour3: "",
+        hour4: "",
         currentTempImage: "lightning_outline.png",
         seasonImage: "",
         popularTrailsStatus: "A little busy",
@@ -43,6 +46,8 @@ var app = new Vue({
         entranceStatus: "A little busy",
 
         displaySeasonImage: true,
+        hourly_Selected: true,
+        daily_Selected: false,
 
     },
     methods: {
@@ -74,12 +79,43 @@ var app = new Vue({
             }else{
                 this.seasonImage = "'images/spring.png'";
             }
+
+            this.hour2 = date.getHours() + 1;
+            if (this.hour2 > 12){
+                this.hour2-=12;
+                TOD = "PM";
+            }else{
+                TOD = "AM";
+            }
+            this.hour2 = this.hour2 + " " + TOD;
+
+            this.hour3 = date.getHours() + 3;
+            if (this.hour3 > 12){
+                this.hour3-=12;
+                TOD = "PM";
+            }else{
+                TOD = "AM";
+            }
+            this.hour3 = this.hour3 + " " + TOD;
+
+            this.hour4 = date.getHours() + 5;
+            if (this.hour4 > 12){
+                this.hour4-=12;
+                TOD = "PM";
+            }else{
+                TOD = "AM";
+            }
+            this.hour4 = this.hour4 + " " + TOD;
         },
         hourlySelected: function(){
             console.log("Hourly selected");
+            this.hourly_Selected = true;
+            this.daily_Selected = false;
         },
         dailySelected: function(){
             console.log("Daily selected");
+            this.hourly_Selected = false;
+            this.daily_Selected = true;
         }
     },
     mounted() {

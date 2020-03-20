@@ -85,14 +85,14 @@
 				</div>
 
 				<div class="hourlyButtonContainer">
-					<button id="hourlyButton">HOURLY</button>
+					<button id="hourlyButton" v-on:click="hourlySelected()">HOURLY</button>
 				</div>
 				<div class="dailyButtonContainer">
-					<button id="dailyButton">DAILY</button>
+					<button id="dailyButton" v-on:click="dailySelected()">DAILY</button>
 				</div>
 				
 				<div class="displayContainer">
-					<div>LIVE</div><div>1 PM</div><div>3 PM</div><div>5 PM</div>
+					<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
 				</div>
 				<div class="displayContainer2">
 					<div id="display1">
