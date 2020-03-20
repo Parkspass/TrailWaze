@@ -32,6 +32,7 @@ randomStops();
 Vue.use(Vuetify);
 var app = new Vue({
     el: '#app',
+    vuetify: new Vuetify(),
     data: {
         todaysDate: "",
         currentTemp: "75",
@@ -41,6 +42,11 @@ var app = new Vue({
         parkingStatus: "As busy as it gets",
         shuttleStatus: "A little busy",
         entranceStatus: "A little busy",
+        drawer: null,
+        items: [
+          { title: 'Home', icon: 'dashboard' },
+          { title: 'About', icon: 'question_answer' },
+        ],
 
         displaySeasonImage: true,
 
