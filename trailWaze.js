@@ -25,6 +25,18 @@ function randomStops(){
     setStop("line6", 105, getRandomIntInclusive(1, 10));
     setStop("line7", 105, getRandomIntInclusive(1, 10));
     setStop("line8", 105, getRandomIntInclusive(1, 10));
+    setStop("line9", 35, getRandomIntInclusive(1, 10));
+    setStop("line10", 55, getRandomIntInclusive(1, 10));
+    setStop("line11", 75, getRandomIntInclusive(1, 10));
+    setStop("line12", 95, getRandomIntInclusive(1, 10));
+    setStop("line13", 105, getRandomIntInclusive(1, 10));
+    setStop("line14", 105, getRandomIntInclusive(1, 10));
+    setStop("line15", 105, getRandomIntInclusive(1, 10));
+    setStop("line16", 105, getRandomIntInclusive(1, 10));
+    setStop("line17", 105, getRandomIntInclusive(1, 10));
+    setStop("line18", 105, getRandomIntInclusive(1, 10));
+    setStop("line19", 105, getRandomIntInclusive(1, 10));
+    setStop("line20", 105, getRandomIntInclusive(1, 10));
 }
 randomStops();
 // End of functions for SVG circle
