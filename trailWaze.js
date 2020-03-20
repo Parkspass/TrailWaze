@@ -17,10 +17,14 @@ function setStop(id, radius, stop){
 }
   
 function randomStops(){
-    setStop("line1", 20, getRandomIntInclusive(1, 10));
-    setStop("line2", 30, getRandomIntInclusive(1, 10));
-    setStop("line3", 40, getRandomIntInclusive(1, 10));
-    setStop("line4", 50, getRandomIntInclusive(1, 10));
+    setStop("line1", 35, getRandomIntInclusive(1, 10));
+    setStop("line2", 55, getRandomIntInclusive(1, 10));
+    setStop("line3", 75, getRandomIntInclusive(1, 10));
+    setStop("line4", 95, getRandomIntInclusive(1, 10));
+    setStop("line5", 105, getRandomIntInclusive(1, 10));
+    setStop("line6", 105, getRandomIntInclusive(1, 10));
+    setStop("line7", 105, getRandomIntInclusive(1, 10));
+    setStop("line8", 105, getRandomIntInclusive(1, 10));
 }
 randomStops();
 // End of functions for SVG circle
