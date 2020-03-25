@@ -35,7 +35,6 @@
     font-family: "myRoboto";
     src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
-
 /* ------------------------------------MOBILE VIEW------------------------------ */
 @media screen and (max-width: 599px) {
     body{
@@ -147,16 +146,16 @@
     .entranceButtons{
         color: #C9AC68;
     }
-    .popButtons:focus{
+    .popButtonsfocus{
         border-bottom: 2px solid #7E8959;
     }
-    .parkButtons:focus{
+    .parkButtonsfocus{
         border-bottom: 2px solid #507282;
     }
-    .shuttleButtons:focus{
+    .shuttleButtonsfocus{
         border-bottom: 2px solid #B25538;
     }
-    .entranceButtons:focus{
+    .entranceButtonsfocus{
         border-bottom: 2px solid #C9AC68;
     }
     .displayContainer{
@@ -266,6 +265,12 @@
         height: 25px;
         margin: 18px;
         vertical-align: middle;
+    }
+    /* ------------------------------------SMALL MOBILE----------------------------- */
+    @media screen and (max-width: 358px) {
+        .displayContainer2 > div{
+            width: 23.6%;
+        }
     }
 }
 

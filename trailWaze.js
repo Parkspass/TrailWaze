@@ -51,6 +51,9 @@ var app = new Vue({
         hour2: "",
         hour3: "",
         hour4: "",
+        day2: "",
+        day3: "",
+        day4: "",
         currentTempImage: "lightning_outline.png",
         seasonImage: "",
         popularTrailsStatus: "A little busy",
@@ -64,8 +67,8 @@ var app = new Vue({
         ],
 
         displaySeasonImage: true,
-        hourly_Selected: true,
-        daily_Selected: false,
+        hourly_selected: true,
+        daily_selected: false,
 
     },
     methods: {
@@ -124,16 +127,31 @@ var app = new Vue({
                 TOD = "AM";
             }
             this.hour4 = this.hour4 + " " + TOD;
+            var day2 = date.getDay()+1;
+            if (day2 > 6){
+                day2 = 0; 
+            }
+            this.day2 = days[day2];
+
+            var day3 = day2+1;
+            if (day3 > 6){
+                day3 = 0; 
+            }
+            this.day3 = days[day3];
+
+            var day4 = day3+1;
+            if (day4 > 6){
+                day4 = 0; 
+            }
+            this.day4 = days[day4];
         },
         hourlySelected: function(){
-            console.log("Hourly selected");
-            this.hourly_Selected = true;
-            this.daily_Selected = false;
+            this.hourly_selected = true;
+            this.daily_selected = false;
         },
         dailySelected: function(){
-            console.log("Daily selected");
-            this.hourly_Selected = false;
-            this.daily_Selected = true;
+            this.hourly_selected = false;
+            this.daily_selected = true;
         }
     },
     mounted() {
