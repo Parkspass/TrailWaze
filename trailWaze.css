@@ -233,6 +233,31 @@
         letter-spacing: 0.25px;
     }
 
+    /* -----------------POPULAR TRAILS PAGE-------------------- */
+    .header{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    #backToHome{
+        background-image: url("icons/backArrow.svg");
+        height: 16px;
+        width: 16px;
+        margin-left: 20px;
+        float: left;
+        margin-top: 6px;
+    }
+    #popTitle{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #7E8959;
+        left: 50%;
+        right: 50%;
+        display: inline;
+        margin-left: -42px;
+    }
+
     /* ------------------------ICONS--------------------------- */
     #popularTrailsIcon{
         display: inline-block;

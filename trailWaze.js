@@ -67,6 +67,9 @@ var app = new Vue({
         ],
 
         displaySeasonImage: true,
+        displayMain: true,
+        displayPopDetailed: false,
+
         hourly_selected: true,
         daily_selected: false,
 
@@ -152,6 +155,22 @@ var app = new Vue({
         dailySelected: function(){
             this.hourly_selected = false;
             this.daily_selected = true;
+        },
+        popHourlySelected: function(){
+            this.hourly_selected = true;
+            this.daily_selected = false;
+        },
+        popDailySelected: function(){
+            this.hourly_selected = false;
+            this.daily_selected = true;
+        },
+        popDetailed: function(){
+            this.displayMain = false;
+            this.displayPopDetailed = true;
+        },
+        backToHomeButton: function(){
+            this.displayPopDetailed = false;
+            this.displayMain = true;
         }
     },
     mounted() {
