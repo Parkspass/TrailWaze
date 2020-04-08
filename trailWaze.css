@@ -42,7 +42,7 @@
         font-style: normal;
         font-weight: normal;
     }
-    #parkTitle{
+    #currentParkTitle{
         color: #7E8959;
         margin-left: 15px;
         margin-top: 15px;
@@ -232,8 +232,39 @@
         line-height: 20px;
         letter-spacing: 0.25px;
     }
+    .detailedTitle{
+        border-bottom: .7px solid rgb(212,212,212, .8);
+        border-top: .7px solid rgb(212,212,212, .8);
+        font-size: 20px;
+        font-family: "titleRoboto";
+        padding: 18px 0px 18px 12px;
+        vertical-align: middle;
 
-    /* -----------------POPULAR TRAILS PAGE-------------------- */
+    }
+    .detailedSection{
+        display: block;
+        border-bottom: .7px solid rgb(212,212,212, .8);
+    }
+    .detailedSection > div, .detailedSection2 > div{
+        display: inline-block;
+        display: -moz-inline-box;
+        *display: inline; /* For IE7 */
+        zoom: 1; /* Trigger hasLayout */
+        width: 24%;
+        text-align: center;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        vertical-align: middle;
+        margin-top: 5px;
+    }
+    .detailedSection2 > div{
+        width: 24%;
+    }
+
+    /* -----------------DETAILED TRAILS PAGES-------------------- */
     .header{
         margin-top: 16px;
         margin-bottom: 16px;
@@ -247,7 +278,7 @@
         float: left;
         margin-top: 6px;
     }
-    #popTitle{
+    #popTitle, #parkTitle, #shuttleTitle, #entranceTitle{
         font-weight: 500;
         font-size: 20px;
         line-height: 23px;
@@ -256,6 +287,15 @@
         right: 50%;
         display: inline;
         margin-left: -42px;
+    }
+    #parkTitle{
+        color: #507282;
+    }
+    #shuttleTitle{
+        color: #B25538;
+    }
+    #entrancetitle{
+        color: #C9AC68;
     }
 
     /* ------------------------ICONS--------------------------- */

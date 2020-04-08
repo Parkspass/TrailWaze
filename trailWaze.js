@@ -69,6 +69,9 @@ var app = new Vue({
         displaySeasonImage: true,
         displayMain: true,
         displayPopDetailed: false,
+        displayParkDetailed: false,
+        displayShuttleDetailed: false,
+        displayEntranceDetailed: false,
 
         hourly_selected: true,
         daily_selected: false,
@@ -156,20 +159,27 @@ var app = new Vue({
             this.hourly_selected = false;
             this.daily_selected = true;
         },
-        popHourlySelected: function(){
-            this.hourly_selected = true;
-            this.daily_selected = false;
-        },
-        popDailySelected: function(){
-            this.hourly_selected = false;
-            this.daily_selected = true;
-        },
         popDetailed: function(){
             this.displayMain = false;
             this.displayPopDetailed = true;
         },
+        parkDetailed: function(){
+            this.displayMain = false;
+            this.displayParkDetailed = true;
+        },
+        shuttleDetailed: function(){
+            this.displayMain = false;
+            this.displayShuttleDetailed = true;
+        },
+        entranceDetailed: function(){
+            this.displayMain = false;
+            this.displayEntranceDetailed = true;
+        },
         backToHomeButton: function(){
             this.displayPopDetailed = false;
+            this.displayParkDetailed = false;
+            this.displayShuttleDetailed = false;
+            this.displayEntranceDetailed = false;
             this.displayMain = true;
         }
     },
