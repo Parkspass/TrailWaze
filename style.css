@@ -265,12 +265,30 @@
     }
     .menuContainer{
         display: block;
+        height: 75px;
+        width: 100%;
+        text-align: left;
     }
     .greenBackground{
         background-color: #7E8959;
     }
+    .blueBackground{
+        background-color: #507282;
+    }
+    .redBackground{
+        background-color: #B25538;
+    }
+    .yellowBackground{
+        background-color: #C9AC68;
+    }
+    .menuIcon{
+        vertical-align: middle;
+        margin: 20px;
+    }
     .menuItem{
         display: inline;
+        color: white;
+        vertical-align: middle;
     }
 
     /* -----------------DETAILED TRAILS PAGES-------------------- */

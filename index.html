@@ -17,22 +17,13 @@
       <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
-	  <script>
-	  	if ('serviceWorker' in navigator) {
-			  navigator.serviceWorker.register("service-worker.js").then(function(reg){
-				  console.log("Service Worker Registration Succeeded. Scope is "+reg.scope);
-			  }).catch(function(err){
-				  console.error("Service Worker registrations failed with error "+err);
-			  });
-		};
-	  </script>
       <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   </head>
 	<body>
 		<div id="app">
 			<v-app>
 				<v-content>
-					<div v-show="displayMain">
+					<div v-if="currentPage=='main'">
 						<div>
 							<v-app-bar dense  class="justify-space-around">
 								<v-layout >
@@ -97,11 +88,23 @@
 							</svg>
 						</div>
 
-						<div id="menuContainer" class="greenBackground" v-show="svgClicked">
-							<div id="popularTrailsIcon"></div>
+						<button class="menuContainer greenBackground" v-show="svgClicked" @click="currentPage='popMain'">
+							<image class="menuIcon" src="icons/trails_outline.svg">
 							<div class="menuItem">Popular Trails: {{popularTrailsStatus}}</div>
-						</div>
-
+						</button>
+						<button class="menuContainer blueBackground" v-show="svgClicked" @click="currentPage='parkMain'">
+							<image class="menuIcon" src="icons/parking_outline.svg">
+							<div class="menuItem">Parking: {{parkingStatus}}</div>
+						</button>
+						<button class="menuContainer redBackground" v-show="svgClicked" @click="currentPage='shuttleMain'">
+							<image class="menuIcon" src="icons/zion_shuttle_outline.svg">
+							<div class="menuItem">Shuttles: {{shuttleStatus}}</div>
+						</button>
+						<button class="menuContainer yellowBackground" v-show="svgClicked" @click="currentPage='entranceMain'">
+							<image class="menuIcon" src="icons/east_entrance_outline.svg">
+							<div class="menuItem">Entrances: {{entranceStatus}}</div>
+						</button>
+						
 						<div v-show="svgNotClicked">
 							<div id="seasonImage" v-bind:style="{ 'background-image': 'url(' + seasonImage + ')' }" v-show="displaySeasonImage" ></div>
 
@@ -346,9 +349,10 @@
 								</div>
 							</div>
 						</div>
+					</div>
 
 						<!-- DETAILED POPULAR TRAILS PAGE -->
-						<div v-show="displayPopDetailed">
+						<div v-if="currentPage=='popDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToHomeButton"></button>
 								<span id="popTitle">Popular Trails</span>
@@ -383,7 +387,7 @@
 						</div>
 
 						<!-- DETAILED PARKING TRAILS PAGE -->
-						<div v-show="displayParkDetailed">
+						<div v-if="currentPage=='parkDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToHomeButton"></button>
 								<span id="parkTitle">Parking</span>
@@ -418,7 +422,7 @@
 						</div>
 
 						<!-- DETAILED SHUTTLE TRAILS PAGE -->
-						<div v-show="displayShuttleDetailed">
+						<div v-if="currentPage=='shuttleDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToHomeButton"></button>
 								<span id="shuttleTitle">Shuttles</span>
@@ -453,7 +457,7 @@
 						</div>
 
 						<!-- DETAILED ENTRANCE TRAILS PAGE -->
-						<div v-show="displayEntranceDetailed">
+						<div v-if="currentPage=='entranceDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToHomeButton"></button>
 								<span id="entranceTitle">Entrances</span>

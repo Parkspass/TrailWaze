@@ -66,12 +66,9 @@ var app = new Vue({
           { title: 'About', icon: 'question_answer' },
         ],
 
+        currentPage: "main",
+
         displaySeasonImage: true,
-        displayMain: true,
-        displayPopDetailed: false,
-        displayParkDetailed: false,
-        displayShuttleDetailed: false,
-        displayEntranceDetailed: false,
         svgNotClicked: true,
         svgClicked: false,
 
@@ -162,27 +159,19 @@ var app = new Vue({
             this.daily_selected = true;
         },
         popDetailed: function(){
-            this.displayMain = false;
-            this.displayPopDetailed = true;
+            this.currentPage = "popDetailed";
         },
         parkDetailed: function(){
-            this.displayMain = false;
-            this.displayParkDetailed = true;
+            this.currentPage = "parkDetailed";
         },
         shuttleDetailed: function(){
-            this.displayMain = false;
-            this.displayShuttleDetailed = true;
+            this.currentPage = "shuttleDetailed";
         },
         entranceDetailed: function(){
-            this.displayMain = false;
-            this.displayEntranceDetailed = true;
+            this.currentPage = "entranceDetailed";
         },
         backToHomeButton: function(){
-            this.displayPopDetailed = false;
-            this.displayParkDetailed = false;
-            this.displayShuttleDetailed = false;
-            this.displayEntranceDetailed = false;
-            this.displayMain = true;
+            this.currentPage = "main";
         },
         svgCircleClicked: function(){
             console.log("svg clicked");
@@ -205,10 +194,8 @@ var app = new Vue({
 // THIS SECTION NEEDED TO REGISTER SERVICE WORKER //
 window.onload = () => {
     'use strict';
-
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-                 .register('./sw.js');
+        navigator.serviceWorker.register('./service-worker.js');
     }
 };
 
