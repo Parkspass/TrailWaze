@@ -263,6 +263,15 @@
     .detailedSection2 > div{
         width: 24%;
     }
+    .menuContainer{
+        display: block;
+    }
+    .greenBackground{
+        background-color: #7E8959;
+    }
+    .menuItem{
+        display: inline;
+    }
 
     /* -----------------DETAILED TRAILS PAGES-------------------- */
     .header{

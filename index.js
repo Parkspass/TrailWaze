@@ -72,6 +72,8 @@ var app = new Vue({
         displayParkDetailed: false,
         displayShuttleDetailed: false,
         displayEntranceDetailed: false,
+        svgNotClicked: true,
+        svgClicked: false,
 
         hourly_selected: true,
         daily_selected: false,
@@ -181,7 +183,17 @@ var app = new Vue({
             this.displayShuttleDetailed = false;
             this.displayEntranceDetailed = false;
             this.displayMain = true;
-        }
+        },
+        svgCircleClicked: function(){
+            console.log("svg clicked");
+            if (this.svgNotClicked){
+                this.svgNotClicked = false;
+                this.svgClicked = true;
+            }else{
+                this.svgNotClicked = true;
+                this.svgClicked = false;
+            }
+        },
     },
     mounted() {
         this.getTodaysDate();
