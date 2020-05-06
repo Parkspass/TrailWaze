@@ -37,6 +37,21 @@ function randomStops(){
     setStop("line18", 105, getRandomIntInclusive(1, 10));
     setStop("line19", 105, getRandomIntInclusive(1, 10));
     setStop("line20", 105, getRandomIntInclusive(1, 10));
+    setStop("line21", 35, getRandomIntInclusive(1, 10)); // trails
+    setStop("line22", 55, getRandomIntInclusive(1, 10));
+    setStop("line23", 75, getRandomIntInclusive(1, 10));
+    setStop("line24", 95, getRandomIntInclusive(1, 10));
+    setStop("line25", 35, getRandomIntInclusive(1, 10)); // Parking
+    setStop("line26", 55, getRandomIntInclusive(1, 10));
+    setStop("line27", 75, getRandomIntInclusive(1, 10));
+    setStop("line28", 95, getRandomIntInclusive(1, 10));
+    setStop("line29", 75, getRandomIntInclusive(1, 10)); // shuttle
+    setStop("line30", 95, getRandomIntInclusive(1, 10));
+    setStop("line31", 35, getRandomIntInclusive(1, 10)); // Entrances
+    setStop("line32", 55, getRandomIntInclusive(1, 10));
+    setStop("line33", 75, getRandomIntInclusive(1, 10));
+    setStop("line34", 95, getRandomIntInclusive(1, 10));
+
 }
 randomStops();
 // End of functions for SVG circle
@@ -66,7 +81,7 @@ var app = new Vue({
           { title: 'About', icon: 'question_answer' },
         ],
 
-        currentPage: "main",
+        currentPage: "main", // main, trails, parking, shuttles, entrances
 
         displaySeasonImage: true,
         svgNotClicked: true,
