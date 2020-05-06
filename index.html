@@ -537,6 +537,251 @@
 							<image class="menuIcon" src="icons/kayenta_outline.svg">
 							<div class="menuItem">Kayenta: {{entranceStatus}}</div>
 						</button>
+
+						<div v-show="svgNotClicked">
+							
+							<!-- ANGELS -->
+							<div class="selectionWrapper">
+								<div class="subHeaderContainer">
+									<div id="angelsIcon"></div>
+									<div class="subHeaders">Angels Landing: {{popularTrailsStatus}}</div>
+								</div>
+
+								<div class="hourlyButtonContainer">
+									<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+								</div>
+								<div class="dailyButtonContainer">
+									<button class="dailyButton popButtons" :class="{popButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+								</div>
+								
+								<div class="displayContainer" v-show="hourly_selected">
+									<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
+								</div>
+								<div class="displayContainer" v-show="daily_selected">
+									<div>LIVE</div><div>{{day2}}</div><div>{{day3}}</div><div>{{day4}}</div>
+								</div>
+								<div class="displayContainer2">
+									<div id="display1">
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line35" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line6" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line7" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line8" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+								</div>
+								<div class="displayContainer">
+									<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
+								</div>
+								<div class="nextHoursContainer" v-show="hourly_selected">
+									<button class="nextHours nextPopHours" @click="popDetailed">NEXT 48 HOURS</button>
+								</div>
+								<div class="nextHoursContainer" v-show="daily_selected">
+									<button class="nextHours nextPopHours" @click="popDetailed">NEXT 15 DAYS</button>
+								</div>
+							</div>
+
+							<!-- Riverside Walk -->
+							<div class="selectionWrapper">
+								<div class="subHeaderContainer">
+									<div id="riversideIcon"></div>
+									<div class="subHeaders">Riverside Walk: {{parkingStatus}}</div>
+								</div>
+								<div class="hourlyButtonContainer">
+									<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+								</div>
+								<div class="dailyButtonContainer">
+									<button class="dailyButton popButtons" :class="{popButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+								</div>
+								
+								<div class="displayContainer" v-show="hourly_selected">
+									<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
+								</div>
+								<div class="displayContainer" v-show="daily_selected">
+									<div>LIVE</div><div>{{day2}}</div><div>{{day3}}</div><div>{{day4}}</div>
+								</div>
+								<div class="displayContainer2">
+									<div id="display1">
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line9" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div >
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line10" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line11" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line12" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+								</div>
+								<div class="displayContainer">
+									<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
+								</div>
+								<div class="nextHoursContainer" v-show="hourly_selected">
+									<button class="nextHours nextPopHours" @click="parkDetailed">NEXT 48 HOURS</button>
+								</div>
+								<div class="nextHoursContainer" v-show="daily_selected">
+									<button class="nextHours nextPopHours" @click="parkDetailed">NEXT 15 DAYS</button>
+								</div>
+							</div>
+
+							<!-- Pa'rus -->
+							<div class="selectionWrapper">
+								<div class="subHeaderContainer">
+									<div id="parusIcon"></div>
+									<div class="subHeaders">Pa'rus: {{shuttleStatus}}</div>
+								</div>
+								<div class="hourlyButtonContainer">
+									<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+								</div>
+								<div class="dailyButtonContainer">
+									<button class="dailyButton popButtons" :class="{popButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+								</div>
+								
+								<div class="displayContainer" v-show="hourly_selected">
+									<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
+								</div>
+								<div class="displayContainer" v-show="daily_selected">
+									<div>LIVE</div><div>{{day2}}</div><div>{{day3}}</div><div>{{day4}}</div>
+								</div>
+								<div class="displayContainer2">
+									<div id="display1">
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line13" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line14" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line15" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line16" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+								</div>
+								<div class="displayContainer">
+									<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
+								</div>
+								<div class="nextHoursContainer" v-show="hourly_selected">
+									<button class="nextHours nextPopHours" @click="shuttleDetailed">NEXT 48 HOURS</button>
+								</div>
+								<div class="nextHoursContainer" v-show="daily_selected">
+									<button class="nextHours nextPopHours" @click="shuttleDetailed">NEXT 15 DAYS</button>
+								</div>
+							</div>
+
+							<!-- Kayenta -->
+							<div class="selectionWrapper">
+								<div class="subHeaderContainer">
+									<div id="kayentaIcon"></div>
+									<div class="subHeaders">Kayenta: {{entranceStatus}}</div>
+								</div>
+								<div class="hourlyButtonContainer">
+									<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+								</div>
+								<div class="dailyButtonContainer">
+									<button class="dailyButton popButtons" :class="{popButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+								</div>
+								
+								<div class="displayContainer" v-show="hourly_selected">
+									<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
+								</div>
+								<div class="displayContainer" v-show="daily_selected">
+									<div>LIVE</div><div>{{day2}}</div><div>{{day3}}</div><div>{{day4}}</div>
+								</div>
+								<div class="displayContainer2">
+									<div id="display1">
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line17" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line18" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line19" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+									<div>
+										<img id="currentWeatherIcon" src="icons/cloud.svg">
+										<svg viewBox="-20 -20 250 250" width="50">
+											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
+											<circle id="line20" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+										</svg>
+									</div>
+								</div>
+								<div class="displayContainer">
+									<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
+								</div>
+								<div class="nextHoursContainer" v-show="hourly_selected">
+									<button class="nextHours nextPopHours" @click="shuttleDetailed">NEXT 48 HOURS</button>
+								</div>
+								<div class="nextHoursContainer" v-show="daily_selected">
+									<button class="nextHours nextPopHours" @click="entranceDetailed">NEXT 15 DAYS</button>
+								</div>
+							</div>
+						</div>
+					
 					</div>
 
 					<!-- END OF TRAILS PAGE CONTENT -->
@@ -609,6 +854,16 @@
 								<circle id="line30" class="overlayLine" cx="100" cy="100" r="95" stroke="#592B1C" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 							</svg>
 						</div>
+
+						<!-- coppied from main page -->
+						<button class="menuContainer" style="background-color: #592B1C;" v-show="svgClicked" @click="currentPage='popMain'">
+							<image class="menuIcon" src="icons/zion_shuttle_outline.svg">
+							<div class="menuItem">Zion: {{popularTrailsStatus}}</div>
+						</button>
+						<button class="menuContainer" style="background-color: #B25538;" v-show="svgClicked" @click="currentPage='parkMain'">
+							<image class="menuIcon" src="icons/springdale_shuttle_outline.svg">
+							<div class="menuItem">Springdale: {{parkingStatus}}</div>
+						</button>
 					</div>
 
 					<!-- END OF SHUTTLES PAGE CONTENT -->
@@ -636,6 +891,25 @@
 								<circle id="line34" class="overlayLine" cx="100" cy="100" r="95" stroke="#4A3F26" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 							</svg>
 						</div>
+
+						<!-- coppied from main page -->
+						<button class="menuContainer" style="background-color: #4A3F26;" v-show="svgClicked" @click="currentPage='popMain'">
+							<image class="menuIcon" src="icons/south_entrance_outline.svg">
+							<div class="menuItem">South: {{popularTrailsStatus}}</div>
+						</button>
+						<button class="menuContainer" style="background-color: #8A7648;" v-show="svgClicked" @click="currentPage='parkMain'">
+							<image class="menuIcon" src="icons/springdale_entrance_outline.svg">
+							<div class="menuItem">Walk-in: {{parkingStatus}}</div>
+						</button>
+						<button class="menuContainer" style="background-color: #C9AC68;" v-show="svgClicked" @click="currentPage='shuttleMain'">
+							<image class="menuIcon" src="icons/east_entrance_outline.svg">
+							<div class="menuItem">East: {{shuttleStatus}}</div>
+						</button>
+						<button class="menuContainer" style="background-color: #CDBD97;" v-show="svgClicked" @click="currentPage='entranceMain'">
+							<image class="menuIcon" src="icons/kolob_outline.svg">
+							<div class="menuItem">Kolob: {{entranceStatus}}</div>
+						</button>
+					</div>
 					</div>
 
 					<!-- END OF ENTRANCES PAGE CONTENT -->

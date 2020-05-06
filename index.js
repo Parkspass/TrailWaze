@@ -51,6 +51,7 @@ function randomStops(){
     setStop("line32", 55, getRandomIntInclusive(1, 10));
     setStop("line33", 75, getRandomIntInclusive(1, 10));
     setStop("line34", 95, getRandomIntInclusive(1, 10));
+    setStop("line35", 105, getRandomIntInclusive(1, 10)); // trails -> Angels
 
 }
 randomStops();
