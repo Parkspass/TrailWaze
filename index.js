@@ -28,6 +28,8 @@ var app = new Vue({
         museumStatus: "A little busy",
         RVStatus: "A little busy",
         springdaleStatus: "A little busy",
+        zionStatus: "A little busy",
+        springStatus: "A little busy",
         
 
         drawer: false,
@@ -63,7 +65,7 @@ var app = new Vue({
             if (minutes < 10){
                 minutes = "0" + date.getMinutes();
             }
-            var fulldate = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDay() + " " + hours + ":" + minutes + " " + TOD;
+            var fulldate = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate() + " " + hours + ":" + minutes + " " + TOD;
             this.todaysDate = fulldate;
             var month = date.getMonth() + 1;
             if (month > 6 & month < 9){
@@ -183,15 +185,18 @@ var app = new Vue({
             c.setAttribute("stroke-dashoffset", stopVal);
             c.className = "overlayLine";
         },
-        popDetailedStops: function(){
-            //this.setStop("w17", 105, 5);
-            //this.setStop("w18", 105, 5);
-        },
+
         randomStops: function(){
             this.setStop("entranceLine", 40, 5);
             this.setStop("shuttleLine", 60, 5);
             this.setStop("parkingLine", 80, 5);
             this.setStop("trailsLine", 100, 5);
+            this.setStop("kayentaLine", 40, 5);
+            this.setStop("parusLine", 60, 5);
+            this.setStop("riverLine", 80, 5);
+            this.setStop("angelsLine", 100, 5);
+            this.setStop("zionLine", 80, 5);
+            this.setStop("springLine", 100, 5);
             this.setStop("w1", 105, 5);
             this.setStop("w2", 105, 5);
             this.setStop("w3", 105, 5);
@@ -208,27 +213,24 @@ var app = new Vue({
             this.setStop("w14", 105, 5);
             this.setStop("w15", 105, 5);
             this.setStop("w16", 105, 5);
-            
-            // this.setStop("w19", 105, 5);
-            // this.setStop("w20", 105, 5);
-            // this.setStop("w21", 105, 5);
-            // this.setStop("w22", 105, 5);
-            // this.setStop("w23", 105, 5);
-            // this.setStop("w24", 105, 5);
-            // this.setStop("kayentaLine", 40, 5);
-            // this.setStop("parusLine", 60, 5);
-            // this.setStop("riverLine", 80, 5);
-            // this.setStop("angelsLine", 100, 5);
-            // this.setStop("w25", 105, 5);
-            // this.setStop("w26", 105, 5);
-            // this.setStop("w27", 105, 5);
-            // this.setStop("w28", 105, 5);
+            this.setStop("w17", 105, 5);
+            this.setStop("w18", 105, 5);
+            this.setStop("w19", 105, 5);
+            this.setStop("w20", 105, 5);
+            this.setStop("w21", 105, 5);
+            this.setStop("w22", 105, 5);
+            this.setStop("w23", 105, 5);
+            this.setStop("w24", 105, 5);
+            this.setStop("w25", 105, 5);
+            this.setStop("w26", 105, 5);
+            this.setStop("w27", 105, 5);
+            this.setStop("w28", 105, 5);
         }
 
     },
     mounted() {
         this.getTodaysDate();
-        this.randomStops();
+        //this.randomStops();
     }
         
 });

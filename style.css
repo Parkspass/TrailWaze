@@ -42,7 +42,7 @@
         font-style: normal;
         font-weight: normal;
     }
-    #currentParkTitle{
+    #currentParkTitle, #parkingTitle, #currentShuttleTitle, #entranceTitle{
         color: #7E8959;
         margin-left: 15px;
         margin-top: 15px;
@@ -50,6 +50,15 @@
         line-height: 23px;
         font-family: 'titleRoboto';
         font-weight: normal;
+    }
+    #parkingTitle{
+        color: #507282;
+    }
+    #currentShuttleTitle{
+        color: #B25538;
+    }
+    #entranceTitle{
+        color: #C9AC68;
     }
     #date{
         margin-left: 15px;
@@ -293,6 +302,18 @@
     .t4Background{
         background-color: #998456;
     }
+    .p1Background{
+        background-color: #283941;
+    }
+    .p2Background{
+        background-color: #507282;
+    }
+    .p3Background{
+        background-color: #95BCCF;
+    }
+    .p4Background{
+        background-color: #8E9FA7;
+    }
     .menuIcon{
         vertical-align: middle;
         margin: 20px;
@@ -301,6 +322,18 @@
         display: inline;
         color: white;
         vertical-align: middle;
+    }
+    .blueText{
+        color: #507282;
+    }
+    .redText{
+        color: #B25538;
+    }
+    .greenText{
+        color: #7E8959;
+    }
+    .yellowText{
+        color: #C9AC68;
     }
 
     /* -----------------DETAILED TRAILS PAGES-------------------- */
@@ -380,6 +413,12 @@
     }
     #springdaleIcon{
         background-image: url("icons/springdale_entrance_outline_green.svg");
+    }
+    #zionIcon{
+        background-image: url("icons/zion_shuttle_outline_red.svg");
+    }
+    #springIcon{
+        background-image: url("icons/springdale_shuttle_outline_green.svg");
     }
     /* ------------------------------------SMALL MOBILE----------------------------- */
     @media screen and (max-width: 358px) {
