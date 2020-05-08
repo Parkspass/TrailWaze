@@ -369,37 +369,17 @@
     #kayentaIcon{
         background-image: url("icons/kayenta_outline_green.svg");
     }
-    #angelsIcon{
-        display: inline-block;
-        background-image: url("icons/angels_landing_outline_green.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
+    #VCIcon{
+        background-image: url("icons/visitor_center_outline_green.svg");
     }
-    #riversideIcon{
-        display: inline-block;
-        background-image: url("icons/riverside_walk_green.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
+    #museumIcon{
+        background-image: url("icons/museum_parking_outline_green.svg");
     }
-    #parusIcon{
-        display: inline-block;
-        background-image: url("icons/parus_outline_green.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
+    #RVIcon{
+        background-image: url("icons/rv_parking_outline_green.svg");
     }
-    #kayentaIcon{
-        display: inline-block;
-        background-image: url("icons/kayenta_outline_green.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
+    #springdaleIcon{
+        background-image: url("icons/springdale_entrance_outline_green.svg");
     }
     /* ------------------------------------SMALL MOBILE----------------------------- */
     @media screen and (max-width: 358px) {

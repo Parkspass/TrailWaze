@@ -24,6 +24,11 @@ var app = new Vue({
         riverStatus: "A little busy",
         parusStatus: "A little busy",
         kayentaStatus: "A little busy",
+        VCStatus: "A little busy",
+        museumStatus: "A little busy",
+        RVStatus: "A little busy",
+        springdaleStatus: "A little busy",
+        
 
         drawer: false,
         items: [
@@ -125,19 +130,15 @@ var app = new Vue({
         },
         popDetailed: function(){
             this.currentPage = "popDetailed";
-            this.popDetailedStops();
         },
         parkDetailed: function(){
             this.currentPage = "parkDetailed";
-            this.parkDetailedStops();
         },
         shuttleDetailed: function(){
             this.currentPage = "shuttleDetailed";
-            this.shuttleDetailedStops();
         },
         entranceDetailed: function(){
             this.currentPage = "entranceDetailed";
-            this.entranceDetailedStops();
         },
         backToHomeButton: function(){
             this.currentPage = "main";
@@ -147,7 +148,6 @@ var app = new Vue({
         },
         changeToTrails: function(){
             this.currentPage = "trailsMain";
-            this.trailsStops();
         },
         changeToMain: function(){
             this.currentPage = "main";
@@ -174,6 +174,7 @@ var app = new Vue({
         
         setStop: function(id, radius, stop){
             var c = document.getElementById(id);
+            console.log(c);
             c.className = "background";
             var stopVal = Math.PI * radius * 2 * (stop/10);
             c.setAttribute("stroke-dasharray", stopVal + ", 3000");
@@ -201,25 +202,14 @@ var app = new Vue({
             this.setStop("w14", 105, 5);
             this.setStop("w15", 105, 5);
             this.setStop("w16", 105, 5);
-        },
-        popDetailedStops: function(){
             this.setStop("w17", 105, 5);
             this.setStop("w18", 105, 5);
-        },
-        parkDetailedStops: function(){
             this.setStop("w19", 105, 5);
             this.setStop("w20", 105, 5);
-        },
-        shuttleDetailedStops: function(){
             this.setStop("w21", 105, 5);
             this.setStop("w22", 105, 5);
-        },
-        entranceDetailedStops: function(){
             this.setStop("w23", 105, 5);
             this.setStop("w24", 105, 5);
-        },
-
-        trailsStops: function(){
             this.setStop("kayentaLine", 40, 5);
             this.setStop("parusLine", 60, 5);
             this.setStop("riverLine", 80, 5);

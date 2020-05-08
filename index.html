@@ -390,7 +390,7 @@
 						</div>
 					</div>
 
-					<!-- DETAILED PARKING TRAILS PAGE -->
+					<!-- DETAILED PARKING PAGE -->
 					<div v-if="currentPage=='parkDetailed'">
 						<div class="header">
 							<button id="backToHome" @click="backToHomeButton"></button>
@@ -406,47 +406,63 @@
 						<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
 							<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
 							<div id="display1">
-								<img id="currentWeatherIcon" src="icons/cloud.svg">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
 								<svg viewBox="-20 -20 250 250" width="50">
 									<circle class="background2" cx="100" cy="100" r="105" stroke="#507282" />
-									<circle id="line5" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+									<circle id="w19" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 								</svg>
 							</div>
 						</div>
 						<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
 							<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
 							<div id="display1">
-								<img id="currentWeatherIcon" src="icons/cloud.svg">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
 								<svg viewBox="-20 -20 250 250" width="50">
 									<circle class="background2" cx="100" cy="100" r="105" stroke="#507282" />
-									<circle id="line5" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+									<circle id="w20" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 								</svg>
 							</div>
 							<div class="detailedTitle">{{todaysDate}}</div>
-							<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
-								<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#507282" />
-										<circle id="w19" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
+						</div>
+					</div>
+
+					<!-- DETAILED ENTRANCE PAGE -->
+					<div v-if="currentPage=='shuttleDetailed'">
+						<div class="header">
+							<button id="backToHome" @click="backToHomeButton"></button>
+							<span id="entranceTitle">Shuttles</span>
+						</div>
+						<div class="hourlyButtonContainer">
+							<button class="hourlyButton entranceButtons" :class="{entranceButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+						</div>
+						<div class="dailyButtonContainer">
+							<button class="dailyButton entranceButtons" :class="{entranceButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+						</div>
+						<div class="detailedTitle">{{todaysDate}}</div>
+						<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
+							<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
+							<div id="display1">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
+								<svg viewBox="-20 -20 250 250" width="50">
+									<circle class="background2" cx="100" cy="100" r="105" stroke="#C9AC68" />
+									<circle id="w23" class="overlayLine2" cx="100" cy="100" r="105" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+								</svg>
 							</div>
-							<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
-								<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#507282" />
-										<circle id="w20" class="overlayLine2" cx="100" cy="100" r="105" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
+						</div>
+		
+						<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
+							<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
+							<div id="display1">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
+								<svg viewBox="-20 -20 250 250" width="50">
+									<circle class="background2" cx="100" cy="100" r="105" stroke="#B25538" />
+									<circle id="w26" class="overlayLine2" cx="100" cy="100" r="105" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+								</svg>
 							</div>
 						</div>
 					</div>
 
-					<!-- DETAILED ENTRANCE TRAILS PAGE -->
+					<!-- DETAILED ENTRANCE PAGE -->
 					<div v-if="currentPage=='entranceDetailed'">
 						<div class="header">
 							<button id="backToHome" @click="backToHomeButton"></button>
@@ -462,7 +478,7 @@
 						<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
 							<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
 							<div id="display1">
-								<img id="currentWeatherIcon" src="icons/cloud.svg">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
 								<svg viewBox="-20 -20 250 250" width="50">
 									<circle class="background2" cx="100" cy="100" r="105" stroke="#C9AC68" />
 									<circle id="line5" class="overlayLine2" cx="100" cy="100" r="105" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
@@ -472,117 +488,13 @@
 						<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
 							<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
 							<div id="display1">
-								<img id="currentWeatherIcon" src="icons/cloud.svg">
+								<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
 								<svg viewBox="-20 -20 250 250" width="50">
 									<circle class="background2" cx="100" cy="100" r="105" stroke="#C9AC68" />
 									<circle id="line5" class="overlayLine2" cx="100" cy="100" r="105" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 								</svg>
 							</div>
-							<div class="detailedTitle">{{todaysDate}}</div>
-							<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
-								<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#B25538" />
-										<circle id="w21" class="overlayLine2" cx="100" cy="100" r="105" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
-							</div>
-							<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
-								<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#B25538" />
-										<circle id="w22" class="overlayLine2" cx="100" cy="100" r="105" stroke="#B25538" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
-							</div>
-
-							<!-- Riverside Walk -->
-							<div class="selectionWrapper">
-								<div class="subHeaderContainer">
-									<div id="riversideIcon"></div>
-									<div class="subHeaders">Riverside Walk: {{parkingStatus}}</div>
-								</div>
-								<div class="hourlyButtonContainer">
-									<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
-								</div>
-								<div class="dailyButtonContainer">
-									<button class="dailyButton popButtons" :class="{popButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
-								</div>
-								
-								<div class="displayContainer" v-show="hourly_selected">
-									<div>LIVE</div><div>{{hour2}}</div><div>{{hour3}}</div><div>{{hour4}}</div>
-								</div>
-								<div class="displayContainer" v-show="daily_selected">
-									<div>LIVE</div><div>{{day2}}</div><div>{{day3}}</div><div>{{day4}}</div>
-								</div>
-								<div class="displayContainer2">
-									<div id="display1">
-										<img id="currentWeatherIcon" src="icons/cloud.svg">
-										<svg viewBox="-20 -20 250 250" width="50">
-											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
-											<circle id="line9" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-										</svg>
-									</div>
-									<div >
-										<img id="currentWeatherIcon" src="icons/cloud.svg">
-										<svg viewBox="-20 -20 250 250" width="50">
-											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
-											<circle id="line10" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-										</svg>
-									</div>
-									<div>
-										<img id="currentWeatherIcon" src="icons/cloud.svg">
-										<svg viewBox="-20 -20 250 250" width="50">
-											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
-											<circle id="line11" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-										</svg>
-									</div>
-									<div>
-										<img id="currentWeatherIcon" src="icons/cloud.svg">
-										<svg viewBox="-20 -20 250 250" width="50">
-											<circle class="background2" cx="100" cy="100" r="105" stroke="#7E8959" />
-											<circle id="line12" class="overlayLine2" cx="100" cy="100" r="105" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-										</svg>
-									</div>
-								</div>
-								<div class="displayContainer">
-									<div>Not busy</div><div>Usually as busy as it gets</div><div>usually a little busy</div><div>usually not too busy</div>
-								</div>
-								<div class="nextHoursContainer" v-show="hourly_selected">
-									<button class="nextHours nextPopHours" @click="parkDetailed">NEXT 48 HOURS</button>
-								</div>
-								<div class="nextHoursContainer" v-show="daily_selected">
-									<button class="nextHours nextPopHours" @click="parkDetailed">NEXT 15 DAYS</button>
-								</div>
-							</div>
-							<div class="detailedTitle">{{todaysDate}}</div>
-							<div v-for="n in 48" class="detailedSection" v-show="hourly_selected">
-								<div>LIVE</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#C9AC68" />
-										<circle id="w23" class="overlayLine2" cx="100" cy="100" r="105" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
-							</div>
-							<div v-for="n in 15" class="detailedSection" v-show="daily_selected">
-								<div>TODAY</div><div>Not busy</div><div>52&#176;</div>
-								<div id="display1">
-									<img id="currentWeatherIcon" src="icons/weather/bkn.svg">
-									<svg viewBox="-20 -20 250 250" width="50">
-										<circle class="background2" cx="100" cy="100" r="105" stroke="#C9AC68" />
-										<circle id="w24" class="overlayLine2" cx="100" cy="100" r="105" stroke="#C9AC68" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
-									</svg>
-								</div>
-							</div>
 						</div>
-
-
 						<!------------------------------->
 
 						<!-- TRAILS FOCUS PAGE CONTENT-->
@@ -645,7 +557,7 @@
 									<circle class="background" cx="100" cy="100" r="100" stroke="#3F452D" />
 								
 									<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
-									<circle id="kayentaLine" class="overlayLine" cx="100" cy="100" r="40" stroke="#998456" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)"/> />
+									<circle id="kayentaLine" class="overlayLine" cx="100" cy="100" r="40" stroke="#998456" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)"/>
 									<circle id="parusLine" class="overlayLine" cx="100" cy="100" r="60" stroke="#A39C67" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
 									<circle id="riverLine" class="overlayLine" cx="100" cy="100" r="80" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
 									<circle id="angelsLine" class="overlayLine" cx="100" cy="100" r="100" stroke="#3F452D" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
@@ -971,26 +883,43 @@
 							<h2 id="date">{{todaysDate}}</h2>
 							<div id="svgContainer" @click="svgCircleClicked()">
 								<svg id="svg" viewBox="-10 -10 220 220" width="90%">
-									<text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #7E8959">{{currentTemp}}&#176;</text><image x="106" y="93" width="16" height="16" v-bind:href="weatherImage"></image>
-									<circle class="background" cx="100" cy="100" r="40" stroke="#998456" />
-									<circle class="background" cx="100" cy="100" r="60" stroke="#A39C67" />
-									<circle class="background" cx="100" cy="100" r="80" stroke="#7E8959" />
-									<circle class="background" cx="100" cy="100" r="100" stroke="#3F452D" />
+									<text x="80" y="106" id="currentTemp" font-size="18" font-weight="bold" style="fill: #507282">{{currentTemp}}&#176;</text><image x="106" y="93" width="16" height="16" v-bind:href="weatherImage"></image>
+									<circle class="background" cx="100" cy="100" r="40" stroke="#8E9FA7" />
+									<circle class="background" cx="100" cy="100" r="60" stroke="#95BCCF" />
+									<circle class="background" cx="100" cy="100" r="80" stroke="#507282" />
+									<circle class="background" cx="100" cy="100" r="100" stroke="#283941" />
 								
 									<!--<path class="overlayLine" d="M 100 80 A 20 20 0 0 1 113 115" stroke="#C9AC68" stroke-dasharray="56.5, 1000" stroke-dashoffset="126" />-->
-									<circle id="kL" class="overlayLine" cx="100" cy="100" r="40" stroke="#998456" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)"/> />
-									<circle id="parusLine" class="overlayLine" cx="100" cy="100" r="60" stroke="#A39C67" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
-									<circle id="riverLine" class="overlayLine" cx="100" cy="100" r="80" stroke="#7E8959" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
-									<circle id="angelsLine" class="overlayLine" cx="100" cy="100" r="100" stroke="#3F452D" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
+									<circle id="kL" class="overlayLine" cx="100" cy="100" r="40" stroke="#8E9FA7" stroke-dasharray="0, 3000" stroke-dashoffset="126" transform="rotate(-90,100,100)"/> />
+									<circle id="parusLine" class="overlayLine" cx="100" cy="100" r="60" stroke="#95BCCF" stroke-dasharray="0, 3000" stroke-dashoffset="188" transform="rotate(-90,100,100)" />
+									<circle id="riverLine" class="overlayLine" cx="100" cy="100" r="80" stroke="#507282" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+									<circle id="angelsLine" class="overlayLine" cx="100" cy="100" r="100" stroke="#283941" stroke-dasharray="0, 3000" stroke-dashoffset="314" transform="rotate(-90,100,100)" />
 								</svg>
 							</div>
 
-							<!-- ANGELS LANDING -->
+							<button class="menuContainer t1Background" v-show="svgClicked" @click="currentPage='VCDetailed'">
+								<image class="menuIcon" src="icons/angels_landing_outline.svg">
+								<div class="menuItem">Visitor Center: {{VCStatus}}</div>
+							</button>
+							<button class="menuContainer t2Background" v-show="svgClicked" @click="currentPage='museumDetailed'">
+								<image class="menuIcon" src="icons/riverside_walk.svg">
+								<div class="menuItem">Museum: {{museumStatus}}</div>
+							</button>
+							<button class="menuContainer t3Background" v-show="svgClicked" @click="currentPage='RVDetailed'">
+								<image class="menuIcon" src="icons/parus_outline.svg">
+								<div class="menuItem">RV: {{RVStatus}}</div>
+							</button>
+							<button class="menuContainer t4Background" v-show="svgClicked" @click="currentPage='springdaleDetailed'">
+								<image class="menuIcon" src="icons/kayenta_outline.svg">
+								<div class="menuItem">Springdale: {{springdaleStatus}}</div>
+							</button>
+
+							<!-- VISITORS CENTER -->
 							<div v-show="svgNotClicked">
 								<div class="selectionWrapper">
 									<div class="subHeaderContainer">
-										<div class="smallIcons" id="angelsIcon"></div>
-										<div class="subHeaders">Angels Landing: {{angelsStatus}}</div>
+										<div class="smallIcons" id="VCIcon"></div>
+										<div class="subHeaders">Visitor Center: {{VCStatus}}</div>
 									</div>
 
 									<div class="hourlyButtonContainer">
@@ -1047,11 +976,11 @@
 									</div>
 								</div>
 
-								<!-- RIVERWALK -->
+								<!-- MUSEUM -->
 								<div class="selectionWrapper">
 									<div class="subHeaderContainer">
-										<div class="smallIcons" id="angelsIcon"></div>
-										<div class="subHeaders">Riverside Walk: {{riverStatus}}</div>
+										<div class="smallIcons" id="museumIcon"></div>
+										<div class="subHeaders">Museum: {{museumStatus}}</div>
 									</div>
 
 									<div class="hourlyButtonContainer">
@@ -1108,11 +1037,11 @@
 									</div>
 								</div>
 
-								<!-- PA'RUS -->
+								<!-- RV -->
 								<div class="selectionWrapper">
 									<div class="subHeaderContainer">
-										<div class="smallIcons" id="angelsIcon"></div>
-										<div class="subHeaders">Pa'rus: {{parusStatus}}</div>
+										<div class="smallIcons" id="RVIcon"></div>
+										<div class="subHeaders">RV: {{RVStatus}}</div>
 									</div>
 
 									<div class="hourlyButtonContainer">
@@ -1169,11 +1098,11 @@
 									</div>
 								</div>
 
-								<!-- KAYENTA -->
+								<!-- SPRINGDALE -->
 								<div class="selectionWrapper">
 									<div class="subHeaderContainer">
-										<div class="smallIcons" id="angelsIcon"></div>
-										<div class="subHeaders">Kayenta: {{kayentaStatus}}</div>
+										<div class="smallIcons" id="springdaleIcon"></div>
+										<div class="subHeaders">Springdale: {{springdaleStatus}}</div>
 									</div>
 
 									<div class="hourlyButtonContainer">
@@ -1899,6 +1828,8 @@
 							</div>
 						</div>
 
+						<!-- RIVERWALK DETAILED -->
+
 						<div v-if="currentPage=='riverDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToTrails"></button>
@@ -1933,6 +1864,8 @@
 							</div>
 						</div>
 
+						<!-- PARUS DETAILED -->
+
 						<div v-if="currentPage=='parusDetailed'">
 							<div class="header">
 								<button id="backToHome" @click="backToTrails"></button>
@@ -1966,6 +1899,8 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- KAYENTA DETAILED -->
 
 						<div v-if="currentPage=='kayentaDetailed'">
 							<div class="header">
