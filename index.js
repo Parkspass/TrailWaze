@@ -130,6 +130,7 @@ var app = new Vue({
         },
         popDetailed: function(){
             this.currentPage = "popDetailed";
+            this.popDetailedStops();
         },
         parkDetailed: function(){
             this.currentPage = "parkDetailed";
@@ -148,6 +149,7 @@ var app = new Vue({
         },
         changeToTrails: function(){
             this.currentPage = "trailsMain";
+            console.log("trails clicked");
         },
         changeToMain: function(){
             this.currentPage = "main";
@@ -181,6 +183,10 @@ var app = new Vue({
             c.setAttribute("stroke-dashoffset", stopVal);
             c.className = "overlayLine";
         },
+        popDetailedStops: function(){
+            //this.setStop("w17", 105, 5);
+            //this.setStop("w18", 105, 5);
+        },
         randomStops: function(){
             this.setStop("entranceLine", 40, 5);
             this.setStop("shuttleLine", 60, 5);
@@ -202,22 +208,21 @@ var app = new Vue({
             this.setStop("w14", 105, 5);
             this.setStop("w15", 105, 5);
             this.setStop("w16", 105, 5);
-            this.setStop("w17", 105, 5);
-            this.setStop("w18", 105, 5);
-            this.setStop("w19", 105, 5);
-            this.setStop("w20", 105, 5);
-            this.setStop("w21", 105, 5);
-            this.setStop("w22", 105, 5);
-            this.setStop("w23", 105, 5);
-            this.setStop("w24", 105, 5);
-            this.setStop("kayentaLine", 40, 5);
-            this.setStop("parusLine", 60, 5);
-            this.setStop("riverLine", 80, 5);
-            this.setStop("angelsLine", 100, 5);
-            this.setStop("w25", 105, 5);
-            this.setStop("w26", 105, 5);
-            this.setStop("w27", 105, 5);
-            this.setStop("w28", 105, 5);
+            
+            // this.setStop("w19", 105, 5);
+            // this.setStop("w20", 105, 5);
+            // this.setStop("w21", 105, 5);
+            // this.setStop("w22", 105, 5);
+            // this.setStop("w23", 105, 5);
+            // this.setStop("w24", 105, 5);
+            // this.setStop("kayentaLine", 40, 5);
+            // this.setStop("parusLine", 60, 5);
+            // this.setStop("riverLine", 80, 5);
+            // this.setStop("angelsLine", 100, 5);
+            // this.setStop("w25", 105, 5);
+            // this.setStop("w26", 105, 5);
+            // this.setStop("w27", 105, 5);
+            // this.setStop("w28", 105, 5);
         }
 
     },
