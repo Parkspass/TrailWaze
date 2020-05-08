@@ -369,6 +369,38 @@
     #kayentaIcon{
         background-image: url("icons/kayenta_outline_green.svg");
     }
+    #angelsIcon{
+        display: inline-block;
+        background-image: url("icons/angels_landing_outline_green.svg");
+        width: 25px;
+        height: 25px;
+        margin: 18px;
+        vertical-align: middle;
+    }
+    #riversideIcon{
+        display: inline-block;
+        background-image: url("icons/riverside_walk_green.svg");
+        width: 25px;
+        height: 25px;
+        margin: 18px;
+        vertical-align: middle;
+    }
+    #parusIcon{
+        display: inline-block;
+        background-image: url("icons/parus_outline_green.svg");
+        width: 25px;
+        height: 25px;
+        margin: 18px;
+        vertical-align: middle;
+    }
+    #kayentaIcon{
+        display: inline-block;
+        background-image: url("icons/kayenta_outline_green.svg");
+        width: 25px;
+        height: 25px;
+        margin: 18px;
+        vertical-align: middle;
+    }
     /* ------------------------------------SMALL MOBILE----------------------------- */
     @media screen and (max-width: 358px) {
         .displayContainer2 > div{

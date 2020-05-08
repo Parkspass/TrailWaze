@@ -31,7 +31,7 @@ var app = new Vue({
           { title: 'About', icon: 'question_answer' },
         ],
 
-        currentPage: "main",
+        currentPage: "main", // main, trails, parking, shuttles, entrances
 
         displaySeasonImage: true,
         svgNotClicked: true,
