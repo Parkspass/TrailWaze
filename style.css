@@ -92,9 +92,9 @@
         background-image: url('images/summer.png');
         width: 100%;
         height: auto;
-        min-height: 60px;
+        min-height: 70px;
         background-repeat:no-repeat;
-        background-size: contain;
+        background-size: cover;
         display: block;
         position: relative;
     }
@@ -281,6 +281,18 @@
     .yellowBackground{
         background-color: #C9AC68;
     }
+    .t1Background{
+        background-color: #3F452D;
+    }
+    .t2Background{
+        background-color: #7E8959;
+    }
+    .t3Background{
+        background-color: #A39C67;
+    }
+    .t4Background{
+        background-color: #998456;
+    }
     .menuIcon{
         vertical-align: middle;
         margin: 20px;
@@ -326,37 +338,36 @@
     }
 
     /* ------------------------ICONS--------------------------- */
-    #popularTrailsIcon{
+    .smallIcons{
         display: inline-block;
-        background-image: url("icons/trails_outline_green.svg");
         width: 25px;
         height: 25px;
         margin: 18px;
         vertical-align: middle;
+    }
+    #popularTrailsIcon{
+        background-image: url("icons/trails_outline_green.svg");
     }
     #parkingIcon{
-        display: inline-block;
         background-image: url("icons/parking_outline_blue.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
     }
     #shuttleIcon{
-        display: inline-block;
         background-image: url("icons/zion_shuttle_outline_red.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
     }
     #entranceIcon{
-        display: inline-block;
         background-image: url("icons/kolob_outline_yellow.svg");
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
+    }
+    #angelsIcon{
+        background-image: url("icons/angels_landing_outline_green.svg");
+    }
+    #riverIcon{
+        background-image: url("icons/riverside_walk_green.svg");
+    }
+    #parusIcon{
+        background-image: url("icons/parus_outline_green.svg");
+    }
+    #kayentaIcon{
+        background-image: url("icons/kayenta_outline_green.svg");
     }
     /* ------------------------------------SMALL MOBILE----------------------------- */
     @media screen and (max-width: 358px) {

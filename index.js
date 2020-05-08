@@ -1,45 +1,5 @@
  /*jshint esversion: 6 */
 console.log('connected');
-// Start of functions for the SVG circle
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-}
-  
-function setStop(id, radius, stop){
-    var c = document.getElementById(id);
-    c.className = "background";
-    var stopVal = Math.PI * radius * 2 * (stop/10);
-    c.setAttribute("stroke-dasharray", stopVal + ", 3000");
-    c.setAttribute("stroke-dashoffset", stopVal);
-    c.className = "overlayLine";
-}
-  
-function randomStops(){
-    setStop("line1", 35, getRandomIntInclusive(1, 10));
-    setStop("line2", 55, getRandomIntInclusive(1, 10));
-    setStop("line3", 75, getRandomIntInclusive(1, 10));
-    setStop("line4", 95, getRandomIntInclusive(1, 10));
-    setStop("line5", 105, getRandomIntInclusive(1, 10));
-    setStop("line6", 105, getRandomIntInclusive(1, 10));
-    setStop("line7", 105, getRandomIntInclusive(1, 10));
-    setStop("line8", 105, getRandomIntInclusive(1, 10));
-    setStop("line9", 35, getRandomIntInclusive(1, 10));
-    setStop("line10", 55, getRandomIntInclusive(1, 10));
-    setStop("line11", 75, getRandomIntInclusive(1, 10));
-    setStop("line12", 95, getRandomIntInclusive(1, 10));
-    setStop("line13", 105, getRandomIntInclusive(1, 10));
-    setStop("line14", 105, getRandomIntInclusive(1, 10));
-    setStop("line15", 105, getRandomIntInclusive(1, 10));
-    setStop("line16", 105, getRandomIntInclusive(1, 10));
-    setStop("line17", 105, getRandomIntInclusive(1, 10));
-    setStop("line18", 105, getRandomIntInclusive(1, 10));
-    setStop("line19", 105, getRandomIntInclusive(1, 10));
-    setStop("line20", 105, getRandomIntInclusive(1, 10));
-}
-randomStops();
-// End of functions for SVG circle
   
 Vue.use(Vuetify);
 var app = new Vue({
@@ -54,12 +14,17 @@ var app = new Vue({
         day2: "",
         day3: "",
         day4: "",
-        currentTempImage: "lightning_outline.png",
+        weatherImage: "./icons/weather/bkn.svg",
         seasonImage: "",
         popularTrailsStatus: "A little busy",
         parkingStatus: "As busy as it gets",
         shuttleStatus: "A little busy",
         entranceStatus: "A little busy",
+        angelsStatus: "A little busy",
+        riverStatus: "A little busy",
+        parusStatus: "A little busy",
+        kayentaStatus: "A little busy",
+
         drawer: false,
         items: [
           { title: 'Home', icon: 'dashboard' },
@@ -160,18 +125,41 @@ var app = new Vue({
         },
         popDetailed: function(){
             this.currentPage = "popDetailed";
+            this.popDetailedStops();
         },
         parkDetailed: function(){
             this.currentPage = "parkDetailed";
+            this.parkDetailedStops();
         },
         shuttleDetailed: function(){
             this.currentPage = "shuttleDetailed";
+            this.shuttleDetailedStops();
         },
         entranceDetailed: function(){
             this.currentPage = "entranceDetailed";
+            this.entranceDetailedStops();
         },
         backToHomeButton: function(){
             this.currentPage = "main";
+        },
+        backToTrails: function(){
+            this.currentPage = "trailsMain";
+        },
+        changeToTrails: function(){
+            this.currentPage = "trailsMain";
+            this.trailsStops();
+        },
+        changeToMain: function(){
+            this.currentPage = "main";
+        },
+        changeToParking: function(){
+            this.currentPage = "parkingMain";
+        },
+        changeToShuttle: function(){
+            this.currentPage = "shuttleMain";
+        },
+        changeToEntrance: function(){
+            this.currentPage = "entranceMain";
         },
         svgCircleClicked: function(){
             console.log("svg clicked");
@@ -183,9 +171,69 @@ var app = new Vue({
                 this.svgClicked = false;
             }
         },
+        
+        setStop: function(id, radius, stop){
+            var c = document.getElementById(id);
+            c.className = "background";
+            var stopVal = Math.PI * radius * 2 * (stop/10);
+            c.setAttribute("stroke-dasharray", stopVal + ", 3000");
+            c.setAttribute("stroke-dashoffset", stopVal);
+            c.className = "overlayLine";
+        },
+        randomStops: function(){
+            this.setStop("entranceLine", 40, 5);
+            this.setStop("shuttleLine", 60, 5);
+            this.setStop("parkingLine", 80, 5);
+            this.setStop("trailsLine", 100, 5);
+            this.setStop("w1", 105, 5);
+            this.setStop("w2", 105, 5);
+            this.setStop("w3", 105, 5);
+            this.setStop("w4", 105, 5);
+            this.setStop("w5", 105, 5);
+            this.setStop("w6", 105, 5);
+            this.setStop("w7", 105, 5);
+            this.setStop("w8", 105, 5);
+            this.setStop("w9", 105, 5);
+            this.setStop("w10", 105, 5);
+            this.setStop("w11", 105, 5);
+            this.setStop("w12", 105, 5);
+            this.setStop("w13", 105, 5);
+            this.setStop("w14", 105, 5);
+            this.setStop("w15", 105, 5);
+            this.setStop("w16", 105, 5);
+        },
+        popDetailedStops: function(){
+            this.setStop("w17", 105, 5);
+            this.setStop("w18", 105, 5);
+        },
+        parkDetailedStops: function(){
+            this.setStop("w19", 105, 5);
+            this.setStop("w20", 105, 5);
+        },
+        shuttleDetailedStops: function(){
+            this.setStop("w21", 105, 5);
+            this.setStop("w22", 105, 5);
+        },
+        entranceDetailedStops: function(){
+            this.setStop("w23", 105, 5);
+            this.setStop("w24", 105, 5);
+        },
+
+        trailsStops: function(){
+            this.setStop("kayentaLine", 40, 5);
+            this.setStop("parusLine", 60, 5);
+            this.setStop("riverLine", 80, 5);
+            this.setStop("angelsLine", 100, 5);
+            this.setStop("w25", 105, 5);
+            this.setStop("w26", 105, 5);
+            this.setStop("w27", 105, 5);
+            this.setStop("w28", 105, 5);
+        }
+
     },
     mounted() {
         this.getTodaysDate();
+        this.randomStops();
     }
         
 });
