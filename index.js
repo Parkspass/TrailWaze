@@ -30,7 +30,10 @@ var app = new Vue({
         springdaleStatus: "A little busy",
         zionStatus: "A little busy",
         springStatus: "A little busy",
-        
+        southStatus: "A little busy",
+        walkinStatus: "A little busy",
+        eastStatus: "A little busy",
+        kolobStatus: "A little busy",
 
         drawer: false,
         items: [
@@ -148,6 +151,15 @@ var app = new Vue({
         },
         backToTrails: function(){
             this.currentPage = "trailsMain";
+        },
+        backToParking: function(){
+            this.currentPage = "parkingMain";
+        },
+        backToShuttles: function(){
+            this.currentPage = "shuttleMain";
+        },
+        backToEntrances: function(){
+            this.currentPage = "entranceMain";
         },
         changeToTrails: function(){
             this.currentPage = "trailsMain";

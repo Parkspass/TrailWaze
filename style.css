@@ -42,7 +42,7 @@
         font-style: normal;
         font-weight: normal;
     }
-    #currentParkTitle, #parkingTitle, #currentShuttleTitle, #entranceTitle{
+    #currentParkTitle, #parkingTitle, #currentShuttleTitle, #currentEntranceTitle{
         color: #7E8959;
         margin-left: 15px;
         margin-top: 15px;
@@ -57,7 +57,7 @@
     #currentShuttleTitle{
         color: #B25538;
     }
-    #entranceTitle{
+    #currentEntranceTitle{
         color: #C9AC68;
     }
     #date{
@@ -164,7 +164,7 @@
     .shuttleButtonsfocus{
         border-bottom: 2px solid #B25538;
     }
-    .entranceButtonsfocus{
+    .entranceButtonsFocus{
         border-bottom: 2px solid #C9AC68;
     }
     .displayContainer{
@@ -314,6 +314,24 @@
     .p4Background{
         background-color: #8E9FA7;
     }
+    .e1Background{
+        background-color: #4A3F26;
+    }
+    .e2Background{
+        background-color: #8A7648;
+    }
+    .e3Background{
+        background-color: #C9AC68;
+    }
+    .e4Background{
+        background-color: #CDBD97;
+    }
+    .s1Background{
+        background-color: #592B1C;
+    }
+    .s2Background{
+        background-color: #B25538;
+    }
     .menuIcon{
         vertical-align: middle;
         margin: 20px;
@@ -342,13 +360,27 @@
         margin-bottom: 16px;
         text-align: center;
     }
-    #backToHome{
-        background-image: url("icons/backArrow.svg");
+    .backButton{
         height: 16px;
         width: 16px;
         margin-left: 20px;
         float: left;
         margin-top: 6px;
+    }
+    #backHome{
+        background-image: url("icons/backArrow.svg");
+    }
+    #backTrails{
+        background-image: url("icons/backArrow.svg");
+    }
+    #backParking{
+        background-image: url("icons/backArrow.svg");
+    }
+    #backShuttles{
+        background-image: url("icons/backArrow.svg");
+    }
+    #backEntrances{
+        background-image: url("icons/backArrow.svg");
     }
     #popTitle, #parkTitle, #shuttleTitle, #entranceTitle{
         font-weight: 500;
@@ -366,7 +398,7 @@
     #shuttleTitle{
         color: #B25538;
     }
-    #entrancetitle{
+    #entranceTitle{
         color: #C9AC68;
     }
 
@@ -419,6 +451,18 @@
     }
     #springIcon{
         background-image: url("icons/springdale_shuttle_outline_green.svg");
+    }
+    #southIcon{
+        background-image: url("icons/south_entrance_outline_green.svg");
+    }
+    #walkinIcon{
+        background-image: url("icons/walk_in_entrance_outline_green.svg");
+    }
+    #eastIcon{
+        background-image: url("icons/east_entrance_outline_green.svg");
+    }
+    #kolobIcon{
+        background-image: url("icons/kolob_outline_yellow.svg");
     }
     /* ------------------------------------SMALL MOBILE----------------------------- */
     @media screen and (max-width: 358px) {
