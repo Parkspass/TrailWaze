@@ -36,442 +36,553 @@
     src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
 /* ------------------------------------MOBILE VIEW------------------------------ */
-@media screen and (max-width: 599px) {
-    body{
-        font-family: 'myRoboto';
-        font-style: normal;
-        font-weight: normal;
-    }
-    #currentParkTitle, #parkingTitle, #currentShuttleTitle, #currentEntranceTitle{
-        color: #7E8959;
-        margin-left: 15px;
-        margin-top: 15px;
-        font-size: 20px;
-        line-height: 23px;
-        font-family: 'titleRoboto';
-        font-weight: normal;
-    }
-    #parkingTitle{
-        color: #507282;
-    }
-    #currentShuttleTitle{
-        color: #B25538;
-    }
-    #currentEntranceTitle{
-        color: #C9AC68;
-    }
-    #date{
-        margin-left: 15px;
-        font-size: 14px;
-        line-height: 16px;
-        color: rgba(0, 0, 0, 0.87);
-        margin-top: 2px;
-        margin-bottom: 15px;
-        font-weight: normal;
-    }
-    #svg{
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: -1;
-        display: block;
-        margin-bottom: 10px;
-        display: block;
-    }
-    #svgContainer{
-        display: block;
-        width: 90%;
-        text-align: center;
-        margin-left: 16px;
-    }
-    .overlayLine2 {
-        fill: none;
-        stroke-width: 30;
-        animation: dash 2s linear forwards;
-    }
-    .background2 {
-        opacity: 0.3;
-        stroke-width: 30;
-        fill: none;
-    }
-    #currentTemp{
-        font-family: 'myRoboto';
-    }
-    #seasonImage{
-        background-image: url('images/summer.png');
-        width: 100%;
-        height: auto;
-        min-height: 70px;
-        background-repeat:no-repeat;
-        background-size: cover;
-        display: block;
-        position: relative;
-    }
-    .subHeaderContainer{
-        display: block;
-        border-bottom: .7px solid rgb(212,212,212, .8);
-    }
-    #popularTrailsContainer{
-        display: block;
-    }
-    .subHeaders{
-        font-size: 16px;
-        line-height: 19px;
-        color: rgba(0, 0, 0, 0.87);
-        display: inline;
-    }
-    .hourlyButtonContainer{
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        left: 0;
-        text-align: center;
-        width: 49%;
-        margin-bottom: 15px;
-        display: inline-block;
-    }
-    .dailyButtonContainer{
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        right: 0;
-        text-align: center;
-        width: 49%;
-        display: inline-block;
-    }
-    .hourlyButton, .dailyButton{
-        width: 100%;
-        height: 48px;
-    }
-    .popButtons{
-        color: #7E8959;
-    }
-    .parkButtons{
-        color: #507282;
-    }
-    .shuttleButtons{
-        color: #B25538;
-    }
-    .entranceButtons{
-        color: #C9AC68;
-    }
-    .popButtonsfocus{
-        border-bottom: 2px solid #7E8959;
-    }
-    .parkButtonsfocus{
-        border-bottom: 2px solid #507282;
-    }
-    .shuttleButtonsfocus{
-        border-bottom: 2px solid #B25538;
-    }
-    .entranceButtonsFocus{
-        border-bottom: 2px solid #C9AC68;
-    }
-    .displayContainer{
-        display: block;
-    }
-    .displayContainer > div, .displayContainer2 > div{
-        display: inline-block;
-        display: -moz-inline-box;
-        *display: inline; /* For IE7 */
-        zoom: 1; /* Trigger hasLayout */
-        width: 25%;
-        text-align: center;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        padding-left: 5px;
-        padding-right: 5px;
-        vertical-align: top;
-    }
+body{
+    font-family: 'myRoboto';
+    font-style: normal;
+    font-weight: normal;
+}
+#currentParkTitle, #parkingTitle, #currentShuttleTitle, #currentEntranceTitle{
+    color: #7E8959;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'titleRoboto';
+    font-weight: normal;
+}
+#parkingTitle{
+    color: #507282;
+}
+#currentShuttleTitle{
+    color: #B25538;
+}
+#currentEntranceTitle{
+    color: #C9AC68;
+}
+#date{
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+#svg{
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    display: block;
+    margin-bottom: 10px;
+    display: block;
+}
+#svgContainer{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin-left: 16px;
+}
+.overlayLine2 {
+    fill: none;
+    stroke-width: 30;
+    animation: dash 2s linear forwards;
+}
+.background2 {
+    opacity: 0.3;
+    stroke-width: 30;
+    fill: none;
+}
+#currentTemp{
+    font-family: 'myRoboto';
+}
+#seasonImage{
+    background-image: url('images/summer.png');
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+.subHeaderContainer{
+    display: block;
+    border-bottom: .7px solid rgb(212,212,212, .8);
+}
+#popularTrailsContainer{
+    display: block;
+}
+.subHeaders{
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.87);
+    display: inline;
+}
+.hourlyButtonContainer{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    left: 0;
+    text-align: center;
+    width: 49%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.dailyButtonContainer{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    right: 0;
+    text-align: center;
+    width: 49%;
+    display: inline-block;
+}
+.hourlyButton, .dailyButton{
+    width: 100%;
+    height: 48px;
+}
+.popButtons{
+    color: #7E8959;
+}
+.parkButtons{
+    color: #507282;
+}
+.shuttleButtons{
+    color: #B25538;
+}
+.entranceButtons{
+    color: #C9AC68;
+}
+.popButtonsfocus{
+    border-bottom: 2px solid #7E8959;
+}
+.parkButtonsfocus{
+    border-bottom: 2px solid #507282;
+}
+.shuttleButtonsfocus{
+    border-bottom: 2px solid #B25538;
+}
+.entranceButtonsFocus{
+    border-bottom: 2px solid #C9AC68;
+}
+.displayContainer{
+    display: block;
+}
+.displayContainer > div, .displayContainer2 > div{
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    width: 25%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+.displayContainer2 > div{
+    width: 24%;
+}
+#display1{
+    margin-left: 3px;
+    margin-right: -2px;
+}
+#currentWeatherIcon{
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+.nextHoursContainer{
+    text-align: center;
+    margin: 20px;
+}
+.nextHours{
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.nextPopHours{
+    color: #7E8959;
+    border: 1px solid #7E8959;
+}
+.nextParkHours{
+    color: #507282;
+    border: 1px solid #507282;
+}
+.nextShuttleHours{
+    color: #B25538;
+    border: 1px solid #B25538;
+}
+.nextEntranceHours{
+    color: #C9AC68;
+    border: 1px solid #C9AC68;
+}
+.selectionWrapper{
+    box-shadow: 0px 3px rgb(212,212,212, .8);
+    padding-bottom: 5px;
+}
+#sideDrawerTitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.15px;
+}
+#ParkTitles{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+.detailedTitle{
+    border-bottom: .7px solid rgb(212,212,212, .8);
+    border-top: .7px solid rgb(212,212,212, .8);
+    margin-top: -15px;
+    font-size: 20px;
+    font-family: "titleRoboto";
+    padding: 18px 0px 18px 12px;
+    vertical-align: middle;
+
+}
+.detailedSection{
+    display: block;
+    border-bottom: .7px solid rgb(212,212,212, .8);
+}
+.detailedSection > div, .detailedSection2 > div{
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    width: 24%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.detailedSection2 > div{
+    width: 24%;
+}
+.menuContainer{
+    display: block;
+    height: 75px;
+    width: 100%;
+    text-align: left;
+}
+.greenBackground{
+    background-color: #7E8959;
+}
+.blueBackground{
+    background-color: #507282;
+}
+.redBackground{
+    background-color: #B25538;
+}
+.yellowBackground{
+    background-color: #C9AC68;
+}
+.t1Background{
+    background-color: #3F452D;
+}
+.t2Background{
+    background-color: #7E8959;
+}
+.t3Background{
+    background-color: #A39C67;
+}
+.t4Background{
+    background-color: #998456;
+}
+.p1Background{
+    background-color: #283941;
+}
+.p2Background{
+    background-color: #507282;
+}
+.p3Background{
+    background-color: #95BCCF;
+}
+.p4Background{
+    background-color: #8E9FA7;
+}
+.e1Background{
+    background-color: #4A3F26;
+}
+.e2Background{
+    background-color: #8A7648;
+}
+.e3Background{
+    background-color: #C9AC68;
+}
+.e4Background{
+    background-color: #CDBD97;
+}
+.s1Background{
+    background-color: #592B1C;
+}
+.s2Background{
+    background-color: #B25538;
+}
+.menuIcon{
+    vertical-align: middle;
+    margin: 20px;
+}
+.menuItem{
+    display: inline;
+    color: white;
+    vertical-align: middle;
+}
+.blueText{
+    color: #507282;
+}
+.redText{
+    color: #B25538;
+}
+.greenText{
+    color: #7E8959;
+}
+.yellowText{
+    color: #C9AC68;
+}
+
+/* -----------------DETAILED TRAILS PAGES-------------------- */
+.header{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.backButton{
+    height: 16px;
+    width: 16px;
+    margin-left: 20px;
+    float: left;
+    margin-top: 6px;
+}
+#backHome{
+    background-image: url("icons/backArrow.svg");
+}
+#backTrails{
+    background-image: url("icons/backArrow.svg");
+}
+#backParking{
+    background-image: url("icons/backArrow.svg");
+}
+#backShuttles{
+    background-image: url("icons/backArrow.svg");
+}
+#backEntrances{
+    background-image: url("icons/backArrow.svg");
+}
+#popTitle, #parkTitle, #shuttleTitle, #entranceTitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #7E8959;
+    left: 50%;
+    right: 50%;
+    display: inline;
+    margin-left: -42px;
+}
+#parkTitle{
+    color: #507282;
+}
+#shuttleTitle{
+    color: #B25538;
+}
+#entranceTitle{
+    color: #C9AC68;
+}
+
+/* ------------------------ICONS--------------------------- */
+.smallIcons{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 18px;
+    vertical-align: middle;
+}
+#popularTrailsIcon{
+    background-image: url("icons/trails_outline_green.svg");
+}
+#parkingIcon{
+    background-image: url("icons/parking_outline_blue.svg");
+}
+#shuttleIcon{
+    background-image: url("icons/zion_shuttle_outline_red.svg");
+}
+#entranceIcon{
+    background-image: url("icons/kolob_outline_yellow.svg");
+}
+#angelsIcon{
+    background-image: url("icons/angels_landing_outline_green.svg");
+}
+#riverIcon{
+    background-image: url("icons/riverside_walk_green.svg");
+}
+#parusIcon{
+    background-image: url("icons/parus_outline_green.svg");
+}
+#kayentaIcon{
+    background-image: url("icons/kayenta_outline_green.svg");
+}
+#VCIcon{
+    background-image: url("icons/visitor_center_outline_green.svg");
+}
+#museumIcon{
+    background-image: url("icons/museum_parking_outline_green.svg");
+}
+#RVIcon{
+    background-image: url("icons/rv_parking_outline_green.svg");
+}
+#springdaleIcon{
+    background-image: url("icons/springdale_entrance_outline_green.svg");
+}
+#zionIcon{
+    background-image: url("icons/zion_shuttle_outline_red.svg");
+}
+#springIcon{
+    background-image: url("icons/springdale_shuttle_outline_green.svg");
+}
+#southIcon{
+    background-image: url("icons/south_entrance_outline_green.svg");
+}
+#walkinIcon{
+    background-image: url("icons/walk_in_entrance_outline_green.svg");
+}
+#eastIcon{
+    background-image: url("icons/east_entrance_outline_green.svg");
+}
+#kolobIcon{
+    background-image: url("icons/kolob_outline_yellow.svg");
+}
+#largerBarTitle{
+    display: none;
+}
+#svgContainerLarge, #displayLarge{
+    display: none;
+}
+/* ------------------------------------SMALL MOBILE----------------------------- */
+@media screen and (max-width: 358px) {
     .displayContainer2 > div{
-        width: 24%;
-    }
-    #display1{
-        margin-left: 3px;
-        margin-right: -2px;
-    }
-    #currentWeatherIcon{
-        margin-top: 15px;
-        margin-left: 15px;
-        height: 20px;
-        width: 20px;
-        position: absolute;
-    }
-    .nextHoursContainer{
-        text-align: center;
-        margin: 20px;
-    }
-    .nextHours{
-        text-align: center;
-        padding: 10px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 16px;
-    }
-    .nextPopHours{
-        color: #7E8959;
-        border: 1px solid #7E8959;
-    }
-    .nextParkHours{
-        color: #507282;
-        border: 1px solid #507282;
-    }
-    .nextShuttleHours{
-        color: #B25538;
-        border: 1px solid #B25538;
-    }
-    .nextEntranceHours{
-        color: #C9AC68;
-        border: 1px solid #C9AC68;
-    }
-    .selectionWrapper{
-        box-shadow: 0px 3px rgb(212,212,212, .8);
-        padding-bottom: 5px;
-    }
-    #sideDrawerTitle{
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 0.15px;
-    }
-    #ParkTitles{
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: 0.25px;
-    }
-    .detailedTitle{
-        border-bottom: .7px solid rgb(212,212,212, .8);
-        border-top: .7px solid rgb(212,212,212, .8);
-        font-size: 20px;
-        font-family: "titleRoboto";
-        padding: 18px 0px 18px 12px;
-        vertical-align: middle;
-
-    }
-    .detailedSection{
-        display: block;
-        border-bottom: .7px solid rgb(212,212,212, .8);
-    }
-    .detailedSection > div, .detailedSection2 > div{
-        display: inline-block;
-        display: -moz-inline-box;
-        *display: inline; /* For IE7 */
-        zoom: 1; /* Trigger hasLayout */
-        width: 24%;
-        text-align: center;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        padding-left: 5px;
-        padding-right: 5px;
-        vertical-align: middle;
-        margin-top: 5px;
-    }
-    .detailedSection2 > div{
-        width: 24%;
-    }
-    .menuContainer{
-        display: block;
-        height: 75px;
-        width: 100%;
-        text-align: left;
-    }
-    .greenBackground{
-        background-color: #7E8959;
-    }
-    .blueBackground{
-        background-color: #507282;
-    }
-    .redBackground{
-        background-color: #B25538;
-    }
-    .yellowBackground{
-        background-color: #C9AC68;
-    }
-    .t1Background{
-        background-color: #3F452D;
-    }
-    .t2Background{
-        background-color: #7E8959;
-    }
-    .t3Background{
-        background-color: #A39C67;
-    }
-    .t4Background{
-        background-color: #998456;
-    }
-    .p1Background{
-        background-color: #283941;
-    }
-    .p2Background{
-        background-color: #507282;
-    }
-    .p3Background{
-        background-color: #95BCCF;
-    }
-    .p4Background{
-        background-color: #8E9FA7;
-    }
-    .e1Background{
-        background-color: #4A3F26;
-    }
-    .e2Background{
-        background-color: #8A7648;
-    }
-    .e3Background{
-        background-color: #C9AC68;
-    }
-    .e4Background{
-        background-color: #CDBD97;
-    }
-    .s1Background{
-        background-color: #592B1C;
-    }
-    .s2Background{
-        background-color: #B25538;
-    }
-    .menuIcon{
-        vertical-align: middle;
-        margin: 20px;
-    }
-    .menuItem{
-        display: inline;
-        color: white;
-        vertical-align: middle;
-    }
-    .blueText{
-        color: #507282;
-    }
-    .redText{
-        color: #B25538;
-    }
-    .greenText{
-        color: #7E8959;
-    }
-    .yellowText{
-        color: #C9AC68;
-    }
-
-    /* -----------------DETAILED TRAILS PAGES-------------------- */
-    .header{
-        margin-top: 16px;
-        margin-bottom: 16px;
-        text-align: center;
-    }
-    .backButton{
-        height: 16px;
-        width: 16px;
-        margin-left: 20px;
-        float: left;
-        margin-top: 6px;
-    }
-    #backHome{
-        background-image: url("icons/backArrow.svg");
-    }
-    #backTrails{
-        background-image: url("icons/backArrow.svg");
-    }
-    #backParking{
-        background-image: url("icons/backArrow.svg");
-    }
-    #backShuttles{
-        background-image: url("icons/backArrow.svg");
-    }
-    #backEntrances{
-        background-image: url("icons/backArrow.svg");
-    }
-    #popTitle, #parkTitle, #shuttleTitle, #entranceTitle{
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 23px;
-        color: #7E8959;
-        left: 50%;
-        right: 50%;
-        display: inline;
-        margin-left: -42px;
-    }
-    #parkTitle{
-        color: #507282;
-    }
-    #shuttleTitle{
-        color: #B25538;
-    }
-    #entranceTitle{
-        color: #C9AC68;
-    }
-
-    /* ------------------------ICONS--------------------------- */
-    .smallIcons{
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        margin: 18px;
-        vertical-align: middle;
-    }
-    #popularTrailsIcon{
-        background-image: url("icons/trails_outline_green.svg");
-    }
-    #parkingIcon{
-        background-image: url("icons/parking_outline_blue.svg");
-    }
-    #shuttleIcon{
-        background-image: url("icons/zion_shuttle_outline_red.svg");
-    }
-    #entranceIcon{
-        background-image: url("icons/kolob_outline_yellow.svg");
-    }
-    #angelsIcon{
-        background-image: url("icons/angels_landing_outline_green.svg");
-    }
-    #riverIcon{
-        background-image: url("icons/riverside_walk_green.svg");
-    }
-    #parusIcon{
-        background-image: url("icons/parus_outline_green.svg");
-    }
-    #kayentaIcon{
-        background-image: url("icons/kayenta_outline_green.svg");
-    }
-    #VCIcon{
-        background-image: url("icons/visitor_center_outline_green.svg");
-    }
-    #museumIcon{
-        background-image: url("icons/museum_parking_outline_green.svg");
-    }
-    #RVIcon{
-        background-image: url("icons/rv_parking_outline_green.svg");
-    }
-    #springdaleIcon{
-        background-image: url("icons/springdale_entrance_outline_green.svg");
-    }
-    #zionIcon{
-        background-image: url("icons/zion_shuttle_outline_red.svg");
-    }
-    #springIcon{
-        background-image: url("icons/springdale_shuttle_outline_green.svg");
-    }
-    #southIcon{
-        background-image: url("icons/south_entrance_outline_green.svg");
-    }
-    #walkinIcon{
-        background-image: url("icons/walk_in_entrance_outline_green.svg");
-    }
-    #eastIcon{
-        background-image: url("icons/east_entrance_outline_green.svg");
-    }
-    #kolobIcon{
-        background-image: url("icons/kolob_outline_yellow.svg");
-    }
-    /* ------------------------------------SMALL MOBILE----------------------------- */
-    @media screen and (max-width: 358px) {
-        .displayContainer2 > div{
-            width: 23.6%;
-        }
+        width: 23.6%;
     }
 }
 
-#green {  /* testing purposed*/
-    background-color: #7E8959;
+/* ------------------------------------TABLET VIEW------------------------------ */
+@media screen and (min-width: 600px){
+    #seasonImage{
+        min-height: 100px;
+        margin-bottom: 10px;
+    }
+    .selectionWrapper{
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        border-bottom: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 370px;
+    }
+    #largerBarTitle{
+        display: block;
+        margin-right: 100px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .detailedTitle{
+        padding-left: 9%;
+    }
+}
+@media screen and (min-width: 720px){
+    #largerBarTitle{
+        margin-left: 34px;
+        margin-right: 25%;
+    }
+    #seasonImage{
+        min-height: 140px;
+        margin-top: 45px;
+    }
+    .selectionWrapper{
+        width: 100%;
+        margin-right: none;
+        float: left;
+        margin-bottom: 15px;
+    }
+    .infoWrapper{
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: 45% 45%;
+    }
+    .displayContainer > div, .displayContainer2 > div{
+        width: 24%;
+    }
+    .displayContainer2 > div{
+        width: 23%;
+    }
+    #svgContainer{
+        display: none;
+    }
+    #svgContainerLarge{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    .svg{
+        position: absolute;
+        top: -18%;
+        right: 10%;
+    }
+    .svgSpecial{
+        position: absolute;
+        top: -63%;
+        right: 10%;
+    }
+    .background{
+        stroke-width: 7px;
+    }
+    #displayLarge{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .status{
+        height: 56px;
+        color: white;
+        font-size: 16px;
+    }
+    .statusWrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .statusImage{
+        height: 23px;
+        width: 23px;
+        margin: 20px 30px 20px 0px;
+        vertical-align: middle;
+    }
+    #currentParkTitle, #parkingTitle, #currentShuttleTitle, #currentEntranceTitle{
+        font-size: 36px;
+        margin-bottom: 15px;
+        margin-left: 48px;
+        position: relative;
+    }
+    #date{
+        font-size: 16px;
+        margin-left: 48px;
+        position: relative;
+    }
+    .breakPoint{
+        margin-bottom: 50px;
+    }
+    .breakPointSpecial{
+        margin-bottom: 70px;
+    }
 }
