@@ -42,13 +42,20 @@ var app = new Vue({
         ],
 
         currentPage: "main", // main, trails, parking, shuttles, entrances
+        titleColor: "#7E8959",
 
         displaySeasonImage: true,
         svgNotClicked: true,
         svgClicked: false,
 
+        // border-bottom when selected
         hourly_selected: true,
         daily_selected: false,
+        trails_selected: false,
+        parking_selected: false,
+        shuttles_selected: false,
+        entrances_selected: false
+        
 
     },
     methods: {
@@ -132,6 +139,36 @@ var app = new Vue({
         dailySelected: function(){
             this.hourly_selected = false;
             this.daily_selected = true;
+        },
+        trailsSelected: function(){
+            this.trails_selected = true;
+            this.parking_selected = false;
+            this.shuttles_selected = false;
+            this.entrances_selected = false;
+        },
+        parkingSelected: function(){
+            this.trails_selected = false;
+            this.parking_selected = true;
+            this.shuttles_selected = false;
+            this.entrances_selected = false;
+        },
+        shuttlesSelected: function(){
+            this.trails_selected = false;
+            this.parking_selected = false;
+            this.shuttles_selected = true;
+            this.entrances_selected = false;
+        },
+        entrancesSelected: function(){
+            this.trails_selected = false;
+            this.parking_selected = false;
+            this.shuttles_selected = false;
+            this.entrances_selected = true;
+        },
+        homeSelected: function() {
+            this.trails_selected = false;
+            this.parking_selected = false;
+            this.shuttles_selected = false;
+            this.entrances_selected = false;
         },
         popDetailed: function(){
             this.currentPage = "popDetailed";
@@ -237,11 +274,21 @@ var app = new Vue({
             this.setStop("w26", 105, 5);
             this.setStop("w27", 105, 5);
             this.setStop("w28", 105, 5);
+        },
+        getTitleColor: function() {
+            switch(this.currentPage) {
+                case 'parkingMain': this.titleColor = '#507282'; break;
+                case 'shuttleMain': this.titleColor = '#B25538'; break;
+                case 'entranceMain': this.titleColor = '#C9AC68'; break;
+                default: this.titleColor = '#7E8959' //covers main page and if err.
+            }
+
         }
 
     },
     mounted() {
         this.getTodaysDate();
+        this.getTitleColor();
         //this.randomStops();
     }
         

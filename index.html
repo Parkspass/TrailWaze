@@ -23,54 +23,87 @@
 		<div id="app">
 			<v-app>
 				<v-content>
-					<!-- MAIN PAGE CONTENT -->
-					<div v-if="currentPage=='main'">
-						<div>
-							<v-app-bar dense class="justify-space-around">
-								<v-toolbar-title id="largerBarTitle" class="greenText">Trailwaze</v-toolbar-title>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'main'">
-										<v-img contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'trailsMain'">
-										<v-img contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'parkingMain'">
-										<v-img contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'shuttleMain'">
-										<v-img contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'entranceMain'">
-										<v-img contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="drawer = !drawer">
-										<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
-									</v-btn>
-								</v-layout>
-							</v-app-bar>
-						</div>
+					<!-- MAIN NAV BAR FOR EVERY PAGE -->
+					<div>
+						<!-- 
+						<button class="hourlyButton popButtons" :class="{popButtonsfocus: hourly_selected}" @click="hourlySelected">HOURLY</button>
+						<button class="dailyButton parkButtons" :class="{parkButtonsfocus: daily_selected}" @click="dailySelected">DAILY</button>
+						trails_selected: false,
+						parking_selected: 
+						shuttles_selected: 
+						entrances_selected:
+						trailsSelected
+						parkingSelected
+						shuttlesSelected
+						entrancesSelected
+						-->
+						<v-app-bar dense class="justify-space-around">
+							<v-toolbar-title id="largerBarTitle" @click="currentPage = 'main'; homeSelected(); getTitleColor()" v-bind:style="{color: titleColor}">Trailwaze</v-toolbar-title>
+							<v-layout >
+								<v-btn text icon @click="currentPage = 'main'; getTitleColor();">
+									<v-img class="d-lg-none"contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
+								</v-btn>
+							</v-layout>
+							<v-layout >
+								<v-btn text icon @click="currentPage = 'trailsMain'; getTitleColor();">
+									<v-img class="d-lg-none" contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
+									<div class="d-none d-lg-flex">
+										<p class=" nav--largeScreen"  @click="trailsSelected" style="color:#7E8959;">Trails</p>
+										<div :class="{trailTabFocus: trails_selected}"></div>
+									</div>
+									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{trailTabFocus: trails_selected}" @click="trailsSelected" style="color:#7E8959;">Trails</p> -->
+								</v-btn>
+							</v-layout>
+							<v-layout >
+								<v-btn text icon @click="currentPage = 'parkingMain'; getTitleColor();">
+									<v-img class="d-lg-none" contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
+									<div  class="d-none d-lg-flex">
+										<p class="nav--largeScreen" @click="parkingSelected" style="color: #507282;">Parking</p>
+										<div :class="{parkingTabFocus: parking_selected}"></div>
+									</div>
+									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{parkingTabFocus: parking_selected}" @click="parkingSelected" style="color: #507282;">Parking</p> -->
+								</v-btn>
+							</v-layout>
+							<v-layout >
+								<v-btn text icon @click="currentPage = 'shuttleMain'; getTitleColor();">
+									<v-img class="d-lg-none" contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
+									<div  class="d-none d-lg-flex">
+										<p class="nav--largeScreen" @click="shuttlesSelected" style="color: #B25538;">Parking</p>
+										<div :class="{shuttlesTabFocus: shuttles_selected}"></div>
+									</div>
+									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{shuttlesTabFocus: shuttles_selected}" @click="shuttlesSelected" style="color: #B25538;">Shuttles</p> -->
+								</v-btn>
+							</v-layout>
+							<v-layout >
+								<v-btn text icon @click="currentPage = 'entranceMain'; getTitleColor();">
+									<v-img class="d-lg-none" contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
+									<div  class="d-none d-lg-flex">
+										<p class="nav--largeScreen" @click="entrancesSelected" style="color: #C9AC68;">Entrances</p>
+										<div :class="{entrancesTabFocus: entrances_selected}"></div>
+									</div>
+									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{entrancesTabFocus: entrances_selected}" @click="entrancesSelected" style="color: #C9AC68;">Entrances</p> -->
+								</v-btn>
+							</v-layout>
+							<v-layout >
+								<v-btn text icon @click="drawer = !drawer">
+									<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
+								</v-btn>
+							</v-layout>
+						</v-app-bar>
+					</div>
+					<!-- Start side drawer -->
+					<v-navigation-drawer class="fill-height" v-model="drawer" right app>
+						<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
+						<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
+						<div id="sideDrawerTitle" class="ml-4">Menu</div>
+						<v-divider></v-divider>
+						<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
+					</v-navigation-drawer>
+					<!-- End side drawer -->
+					<!-- END MAIN NAV BAR FOR EVERY PAGE -->
 
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" right app>
-							<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<v-divider></v-divider>
-							<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-			
+					<div v-if="currentPage=='main'">
+						
 						<div v-if="currentPage=='main'">
 							<h1 id="currentParkTitle">Zion National Park</h1>
 							<h2 id="date">{{todaysDate}}</h2>
@@ -547,52 +580,7 @@
 					<!-- TRAILS FOCUS PAGE CONTENT-->
 			
 					<div v-if="currentPage=='trailsMain'">
-						<div>
-							<v-app-bar dense class="justify-space-around">
-								<v-toolbar-title id="largerBarTitle" class="greenText">Trailwaze</v-toolbar-title>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'main'">
-										<v-img contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'trailsMain'">
-										<v-img contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'parkingMain'">
-										<v-img contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'shuttleMain'">
-										<v-img contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="currentPage = 'entranceMain'">
-										<v-img contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="drawer = !drawer">
-										<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
-									</v-btn>
-								</v-layout>
-							</v-app-bar>
-						</div>
-
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" right app>
-							<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<v-divider></v-divider>
-							<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-		
+								
 						<h1 id="currentParkTitle">Popular Trails</h1>
 						<h2 id="date">{{todaysDate}}</h2>
 
@@ -924,52 +912,7 @@
 					<!-- PARKING FOCUS PAGE CONTENT-->
 					
 					<div v-if="currentPage=='parkingMain'">
-						<div>
-							<v-app-bar dense  class="justify-space-around">
-								<v-toolbar-title id="largerBarTitle" class="blueText">Trailwaze</v-toolbar-title>
-								<v-layout >
-									<v-btn text icon @click.native="changeToMain">
-										<v-img contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToTrails">
-										<v-img contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToParking">
-										<v-img contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToShuttle">
-										<v-img contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToEntrance">
-										<v-img contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="drawer = !drawer">
-										<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
-									</v-btn>
-								</v-layout>
-							</v-app-bar>
-						</div>
 						
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" right app>
-							<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<v-divider></v-divider>
-							<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-		
 						<h1 id="parkingTitle">Parking</h1>
 						<h2 id="date">{{todaysDate}}</h2>
 						<div id="svgContainer" @click="svgCircleClicked()">
@@ -1299,53 +1242,8 @@
 
 					<!-- SHUTTLE FOCUS PAGE CONTENT-->
 					
-					<div v-if="currentPage=='shuttleMain'">
-						<div>
-							<v-app-bar dense  class="justify-space-around">
-								<v-toolbar-title id="largerBarTitle" class="redText">Trailwaze</v-toolbar-title>
-								<v-layout >
-									<v-btn text icon @click.native="changeToMain">
-										<v-img contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToTrails">
-										<v-img contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToParking">
-										<v-img contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToShuttle">
-										<v-img contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToEntrance">
-										<v-img contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="drawer = !drawer">
-										<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
-									</v-btn>
-								</v-layout>
-							</v-app-bar>
-						</div>
-						
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" right app>
-							<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<v-divider></v-divider>
-							<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-		
+					 <div v-if="currentPage=='shuttleMain'">
+
 						<h1 id="currentShuttleTitle">Shuttles</h1>
 						<h2 id="date">{{todaysDate}}</h2>
 						<div id="svgContainer" @click="svgCircleClicked()">
@@ -1530,53 +1428,8 @@
 					<!------------------------------->
 
 					<!-- ENTRANCE FOCUS PAGE CONTENT-->
-					<div v-if="currentPage=='entranceMain'">
-						<div>
-							<v-app-bar dense  class="justify-space-around">
-								<v-toolbar-title id="largerBarTitle" class="yellowText">Trailwaze</v-toolbar-title>
-								<v-layout >
-									<v-btn text icon @click.native="changeToMain">
-										<v-img contain height="25px" width="25px" src="./icons/home_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToTrails">
-										<v-img contain height="25px" width="25px" src="./icons/trails_outline_green.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToParking">
-										<v-img contain height="25px" width="25px" src="./icons/parking_outline_blue.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToShuttle">
-										<v-img contain height="25px" width="25px" src="./icons/zion_shuttle_outline_red.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click.native="changeToEntrance">
-										<v-img contain height="25px" width="25px" src="./icons/kolob_outline_yellow.svg"></v-img>
-									</v-btn>
-								</v-layout>
-								<v-layout >
-									<v-btn text icon @click="drawer = !drawer">
-										<v-img contain height="25px" width="25px" src="./icons/menu_green.svg" ></v-img>
-									</v-btn>
-								</v-layout>
-							</v-app-bar>
-						</div>
-						
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" right app>
-							<v-toolbar color="#7E8959" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<v-divider></v-divider>
-							<div id="ParkTitles" class="ml-4 mt-5">Zion National Park</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-		
+					 <div v-if="currentPage=='entranceMain'">
+								
 						<h1 id="currentEntranceTitle">Entrances</h1>
 						<h2 id="date">{{todaysDate}}</h2>
 						<div id="svgContainer" @click="svgCircleClicked()">

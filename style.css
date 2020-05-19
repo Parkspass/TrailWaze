@@ -166,6 +166,35 @@ body{
 .entranceButtonsFocus{
     border-bottom: 2px solid #C9AC68;
 }
+.trailTabFocus{
+    position: absolute;
+    margin-top: 44px;
+    width: 68px;
+    height: 4px;
+    border-bottom:  solid #7E8959;
+}
+.parkingTabFocus{
+    position: absolute;
+    margin-top: 44px;
+    width: 83px;
+    height: 4px;
+    border-bottom: 2px solid #507282;
+}
+.shuttlesTabFocus{
+    position: absolute;
+    margin-top: 44px;
+    width: 83px;
+    height: 4px;
+    border-bottom: 2px solid #B25538;
+}
+.entrancesTabFocus{
+    position: absolute;
+    margin-top: 44px;
+    width: 115px;
+    height: 4px;
+    border-bottom: 2px solid #C9AC68;
+}
+
 .displayContainer{
     display: block;
 }
@@ -465,6 +494,7 @@ body{
     background-image: url("icons/kolob_outline_yellow.svg");
 }
 #largerBarTitle{
+    cursor: pointer;
     display: none;
 }
 #svgContainerLarge, #displayLarge{
@@ -586,3 +616,23 @@ body{
         margin-bottom: 70px;
     }
 }
+
+.nav--largeScreen {
+    font-size: 16px;
+    margin-top: 16px;
+}
+button{ /* get rid of blue outline on buttons*/
+    outline: none;
+}
+
+
+
+/* TRAILS FOCUS PAGE CONTENT */
+/* 
+green #7E8959
+blue #507282
+red #B25538
+yellow #C9AC68
+
+
+*/
