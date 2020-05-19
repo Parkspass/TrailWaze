@@ -288,7 +288,6 @@ var app = new Vue({
                 case 'entranceMain': this.titleColor = '#C9AC68'; break;
                 default: this.titleColor = '#7E8959' //covers main page and if err.
             }
-            console.log('page: ', this.currentPage);
         },
         setTabImage: function() {
             this.resetTabImages();
