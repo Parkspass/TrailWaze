@@ -56,7 +56,7 @@ var app = new Vue({
         shuttles_selected: false,
         entrances_selected: false,
         // dynamic tab images
-        homeTabImage: "./icons/home_green.svg",   // starts as solid image   non solid -> ./icons/home_outline_green.svg
+        homeTabImage: "./icons/home_green.svg",   // starts as solid image 
         trailsTabImage: "./icons/trails_outline_green.svg", // the rest start as no solid
         parkingTabImage: "./icons/parking_outline_blue.svg",
         shuttleTabImage: "./icons/zion_shuttle_outline_red.svg",
@@ -291,6 +291,7 @@ var app = new Vue({
             console.log('page: ', this.currentPage);
         },
         setTabImage: function() {
+            this.resetTabImages();
             switch(this.currentPage){
                 case 'main'        : this.homeTabImage     = './icons/home_green.svg'; break;
                 case 'trailsMain'  : this.trailsTabImage   = './icons/trail_solid_green.svg'; break;
@@ -298,12 +299,13 @@ var app = new Vue({
                 case 'shuttleMain' : this.shuttleTabImage  = './icons/zion_shuttle_solid_red.svg'; break;
                 case 'entranceMain': this.entranceTabImage = './icons/kolob_solid_yellow.svg'; break;
             }
-            // homeTabImage
-            // trailsTabImage
-            // parkingTabImage
-            // shuttleTabImage
-            // entranceTabImage
-            // main, trailsMain, parkingMain, shuttleMain, entranceMain
+        },
+        resetTabImages: function() {
+            this.homeTabImage = './icons/home_outline_green.svg';
+            this.trailsTabImage = './icons/trails_outline_green.svg';
+            this.parkingTabImage = './icons/parking_outline_blue.svg';
+            this.shuttleTabImage = './icons/zion_shuttle_outline_red.svg';
+            this.entranceTabImage = './icons/kolob_outline_yellow.svg';
         }
 
     },

@@ -29,47 +29,43 @@
 							<v-toolbar-title id="largerBarTitle" @click="currentPage = 'main'; homeSelected(); getTitleColor()" v-bind:style="{color: titleColor}">Trailwaze</v-toolbar-title>
 							<v-layout >
 								<v-btn text icon @click="currentPage = 'main'; getTitleColor(); setTabImage();">
-									<v-img class="d-lg-none"contain height="25px" width="25px" :src="homeTabImage"></v-img> <!-- ./icons/home_outline_green.svg -->
+									<v-img class="d-lg-none"contain height="25px" width="25px" :src="homeTabImage"></v-img> 
 								</v-btn>
 							</v-layout>
 							<v-layout >
 								<v-btn text icon @click="currentPage = 'trailsMain'; getTitleColor(); setTabImage();">
-									<v-img class="d-lg-none " contain height="25px" width="25px" :src="trailsTabImage"></v-img> <!-- ./icons/trails_outline_green.svg -->
+									<v-img class="d-lg-none " contain height="25px" width="25px" :src="trailsTabImage"></v-img> 
 									<div class="d-none d-lg-flex">
 										<p class=" nav--largeScreen"  @click="trailsSelected" style="color:#7E8959;">Trails</p>
 										<div :class="{trailTabFocus: trails_selected}"></div>
 									</div>
-									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{trailTabFocus: trails_selected}" @click="trailsSelected" style="color:#7E8959;">Trails</p> -->
 								</v-btn>
 							</v-layout>
 							<v-layout > 
 								<v-btn text icon @click="currentPage = 'parkingMain'; getTitleColor(); setTabImage();">
-									<v-img class="d-lg-none" contain height="25px" width="25px" :src="parkingTabImage"></v-img> <!-- ./icons/parking_outline_blue.svg -->
+									<v-img class="d-lg-none" contain height="25px" width="25px" :src="parkingTabImage"></v-img> 
 									<div  class="d-none d-lg-flex">
 										<p class="nav--largeScreen" @click="parkingSelected" style="color: #507282;">Parking</p>
 										<div :class="{parkingTabFocus: parking_selected}"></div>
 									</div>
-									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{parkingTabFocus: parking_selected}" @click="parkingSelected" style="color: #507282;">Parking</p> -->
 								</v-btn>
 							</v-layout>
 							<v-layout >
 								<v-btn text icon @click="currentPage = 'shuttleMain'; getTitleColor(); setTabImage();">
-									<v-img class="d-lg-none" contain height="25px" width="25px" :src="shuttleTabImage"></v-img> <!-- ./icons/zion_shuttle_outline_red.svg -->
+									<v-img class="d-lg-none" contain height="25px" width="25px" :src="shuttleTabImage"></v-img>
 									<div  class="d-none d-lg-flex">
 										<p class="nav--largeScreen" @click="shuttlesSelected" style="color: #B25538;">Shuttles</p>
 										<div :class="{shuttlesTabFocus: shuttles_selected}"></div>
 									</div>
-									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{shuttlesTabFocus: shuttles_selected}" @click="shuttlesSelected" style="color: #B25538;">Shuttles</p> -->
 								</v-btn>
 							</v-layout>
 							<v-layout >
 								<v-btn text icon @click="currentPage = 'entranceMain'; getTitleColor(); setTabImage();">
-									<v-img class="d-lg-none" contain height="25px" width="25px" :src="entranceTabImage"></v-img> <!-- ./icons/kolob_outline_yellow.svg -->
+									<v-img class="d-lg-none" contain height="25px" width="25px" :src="entranceTabImage"></v-img> 
 									<div  class="d-none d-lg-flex">
 										<p class="nav--largeScreen" @click="entrancesSelected" style="color: #C9AC68;">Entrances</p>
 										<div :class="{entrancesTabFocus: entrances_selected}"></div>
 									</div>
-									<!-- <p class="d-none d-lg-flex nav--largeScreen" :class="{entrancesTabFocus: entrances_selected}" @click="entrancesSelected" style="color: #C9AC68;">Entrances</p> -->
 								</v-btn>
 							</v-layout>
 							<v-layout >
