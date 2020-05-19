@@ -41,7 +41,7 @@ var app = new Vue({
           { title: 'About', icon: 'question_answer' },
         ],
 
-        currentPage: "main", // main, trails, parking, shuttles, entrances
+        currentPage: "main", // main, trailsMain, parkingMain, shuttleMain, entranceMain
         titleColor: "#7E8959",
 
         displaySeasonImage: true,
@@ -54,7 +54,13 @@ var app = new Vue({
         trails_selected: false,
         parking_selected: false,
         shuttles_selected: false,
-        entrances_selected: false
+        entrances_selected: false,
+        // dynamic tab images
+        homeTabImage: "./icons/home_green.svg",   // starts as solid image   non solid -> ./icons/home_outline_green.svg
+        trailsTabImage: "./icons/trails_outline_green.svg", // the rest start as no solid
+        parkingTabImage: "./icons/parking_outline_blue.svg",
+        shuttleTabImage: "./icons/zion_shuttle_outline_red.svg",
+        entranceTabImage: "./icons/kolob_outline_yellow.svg"
         
 
     },
@@ -282,7 +288,22 @@ var app = new Vue({
                 case 'entranceMain': this.titleColor = '#C9AC68'; break;
                 default: this.titleColor = '#7E8959' //covers main page and if err.
             }
-
+            console.log('page: ', this.currentPage);
+        },
+        setTabImage: function() {
+            switch(this.currentPage){
+                case 'main'        : this.homeTabImage     = './icons/home_green.svg'; break;
+                case 'trailsMain'  : this.trailsTabImage   = './icons/trail_solid_green.svg'; break;
+                case 'parkingMain' : this.parkingTabImage  = './icons/parking_solid_blue.svg'; break;
+                case 'shuttleMain' : this.shuttleTabImage  = './icons/zion_shuttle_solid_red.svg'; break;
+                case 'entranceMain': this.entranceTabImage = './icons/kolob_solid_yellow.svg'; break;
+            }
+            // homeTabImage
+            // trailsTabImage
+            // parkingTabImage
+            // shuttleTabImage
+            // entranceTabImage
+            // main, trailsMain, parkingMain, shuttleMain, entranceMain
         }
 
     },

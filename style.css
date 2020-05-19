@@ -624,6 +624,9 @@ body{
 button{ /* get rid of blue outline on buttons*/
     outline: none;
 }
+.greenSVG{
+    filter: invert(48%) sepia(79%) brightness(118%) contrast(119%);
+}
 
 
 
